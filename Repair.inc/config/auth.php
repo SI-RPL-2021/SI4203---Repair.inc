@@ -46,6 +46,36 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'admin' => [
+          'driver' => 'session',
+          'provider' => 'admins',
+        ],
+
+        'admin-api' => [
+            'driver' => 'token',
+            'provider' => 'admins',
+        ],
+
+        'mitra' => [
+            'driver' => 'session',
+            'provider' => 'mitras',
+            ],
+    
+            'mitra-api' => [
+            'driver' => 'token',
+            'provider' => 'mitras',
+            ],
+
+        'customer' => [
+          'driver' => 'session',
+          'provider' => 'customers',
+        ],
+
+        'customer-api' => [
+            'driver' => 'token',
+            'provider' => 'customers',
+        ],
     ],
 
     /*
@@ -66,9 +96,19 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'customers' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Customer::class,
+        ],
+
+        'mitras' => [
+            'driver' => 'eloquent',
+            'model' => App\Mitra::class,
+        ],
+
+        'admins' => [
+          'driver' => 'eloquent',
+          'model' => App\Admin::class,
         ],
 
         // 'users' => [
