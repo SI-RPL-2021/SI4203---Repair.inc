@@ -20,6 +20,10 @@ class Authenticate extends Middleware
 
       return redirect('/customer');
 
+    } else if (Auth::guard('mitra')->check()) {
+
+      return redirect('/mitra');
+      
     } else if (Auth::guard('admin')->check()) {
 
       return redirect('/admin');

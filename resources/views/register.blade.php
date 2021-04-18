@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Register</title>
 </head>
+
 <body>
 
   <form action="{{ route('register.store') }}" method="POST">
@@ -16,4 +18,5 @@
   <a href="/">kembali login</a>
 
 </body>
+
 </html>

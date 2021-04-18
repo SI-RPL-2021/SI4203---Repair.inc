@@ -6,7 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 	<title>@yield('title')</title>
-	
+
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="{{asset('assets/css/plugins.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 	<script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+
+	@yield('css-plus')
 </head>
 
 <body>
@@ -28,6 +30,8 @@
 	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
 	<script src="{{asset('assets/js/plugins.js')}}"></script>
 	<script src="{{asset('assets/js/main.js')}}"></script>
+
+	@yield('js-plus')
 </body>
 
 </html>

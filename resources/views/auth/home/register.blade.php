@@ -1,13 +1,13 @@
 @extends('app')
 
 @section('title')
-Register | Repair-Inch
+Register | Repair-Inc
 @endsection
 
 @section('content')
 
 <div class="register-section section mt-90 mb-90">
-	<div class="container">
+	<div class="container mb10">
 		<div class="row">
 			<div class="col-md-3 col-12 d-flex">
 			</div>

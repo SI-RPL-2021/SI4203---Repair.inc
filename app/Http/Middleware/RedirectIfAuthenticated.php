@@ -18,7 +18,11 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-       if (Auth::guard('customer')->check()) {
+        if (Auth::guard('mitra')->check()) {
+
+            return redirect('/mitra');
+
+      } else if (Auth::guard('customer')->check()) {
 
           return redirect('/customer');
 

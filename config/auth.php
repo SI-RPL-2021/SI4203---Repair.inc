@@ -57,6 +57,16 @@ return [
             'provider' => 'admins',
         ],
 
+        'mitra' => [
+          'driver' => 'session',
+          'provider' => 'mitras',
+        ],
+
+        'mitra-api' => [
+            'driver' => 'token',
+            'provider' => 'mitras',
+        ],
+
         'customer' => [
           'driver' => 'session',
           'provider' => 'customers',
@@ -89,6 +99,11 @@ return [
         'customers' => [
             'driver' => 'eloquent',
             'model' => App\Customer::class,
+        ],
+
+        'mitras' => [
+            'driver' => 'eloquent',
+            'model' => App\Mitra::class,
         ],
 
         'admins' => [
