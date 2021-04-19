@@ -1,18 +1,40 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+Route::get('/', 'HomeController@home')->name('home');
+Route::get('/register', 'HomeController@register')->name('home.register')->middleware('guest');
+Route::get('/login', 'HomeController@login')->name('login')->middleware('guest');
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::post('/login', 'LoginController@postLogin');
+Route::post('/register/post', 'LoginController@register_store')->name('register.store');
+Route::get('/logout', 'LoginController@logout');
 
-Route::get('/', function () {
-    return view('welcome');
+
+// ADMIN
+Route::prefix('admin')->middleware('auth:admin')->group(function () {
+	Route::get('/', 'AdminController@dashboard')->name('admin.dashboard');
+
+Route::prefix('mitra')->group(function () {
+	Route::get('/', 'AdminController@mitra')->name('admin.mitra');
+	Route::post('/store', 'MitraController@store')->name('admin.mitra.store');
+	Route::post('/edit/{id}', 'MitraController@edit')->name('admin.mitra.edit');
+	Route::post('/delete/{id}', 'MitraController@delete')->name('admin.mitra.delete');
+});
+});
+
+// CUSTOMER
+Route::prefix('customer')->middleware('auth:customer')->group(function () {
+});
+
+// Mitra
+Route::prefix('mitra')->middleware('auth:mitra')->group(function () {
+	Route::get('/', 'MitraController@dashboard')->name('mitra.dashboard');
+	
+	Route::prefix('pesanan')->group(function () {
+		Route::get('/', 'MitraController@pesanan')->name('mitra.pesanan');
+		Route::get('/tolak/{id}', 'PesananController@tolak')->name('mitra.pesanan.tolak');
+		Route::get('/setujui/{id}', 'PesananController@setujui')->name('mitra.pesanan.setujui');
+		Route::post('/konfirmasi-bayar', 'PesananController@konfirmasi_bayar')->name('mitra.pesanan.konfirmasi_bayar');
+
+	});
 });
