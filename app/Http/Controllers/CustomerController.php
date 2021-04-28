@@ -2,25 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
-use App\Kategori;
-use App\Pesanan;
-use Auth;
+use App\Customer;
+use Illuminate\Support\Facades\Hash;
 
 class CustomerController extends Controller
 {
-	public function order(){
-		$kategoris = Kategori::limit(4)->get();
-		$pesanan = Pesanan::where('id_customer', Auth::guard('customer')->user()->id)->get();
+	public function dashboard(){
 
-		return view('auth.customer.order', compact('kategoris','pesanan'));
+		return view('auth.customer.dashboard');
+	}
+public function delete($id){
+		$post = Customer::find($id);
+		$post->delete();
+
+		return redirect()->back();
 	}
 
-	public function pembayaran($id){
-		$kategoris = Kategori::limit(4)->get();
-		$pesanan = Pesanan::where('id', $id)->get();
+	public function edit(Request $request, $id){
+		$post = Customer::find($id);
 
-		return view('auth.customer.pembayaran', compact('kategoris','pesanan'));
+		$post->username = $request->username;
+		$post->password = Hash::make($request->password);
+		$post->email = $request->email;
+		$post->notelp = $request->notelp;
+		$post->alamat = $request->alamat;
+
+		$post->save();
+
+		return redirect()->back();
 	}
 }

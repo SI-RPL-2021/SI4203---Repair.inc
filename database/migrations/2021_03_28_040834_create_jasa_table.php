@@ -24,7 +24,6 @@ class CreateJasaTable extends Migration
             ->onDelete('cascade')
             ->onUpdate('cascade');
             $table->string('nama');
-            $table->string('gambar');
             $table->integer('harga');
             $table->boolean('ratting');
             $table->longText('deskripsi');

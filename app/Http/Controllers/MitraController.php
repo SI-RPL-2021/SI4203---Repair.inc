@@ -7,8 +7,6 @@ use Illuminate\Support\Facades\Hash;
 use App\Mitra;
 use App\Jasa;
 use App\Kategori;
-use App\Pesanan;
-use App\Tracking;
 use Auth;
 
 class MitraController extends Controller
@@ -25,25 +23,7 @@ class MitraController extends Controller
 	}
 
 	public function pesanan(){
-		$jasa = Jasa::where('id_mitra', Auth::guard('mitra')->user()->id)->get();
-
-		$jasas = [];
-
-		foreach ($jasa as $key) {
-			$jasas[] = [$key->id];	
-		};
-
-		$pesanans = [];
-
-		$pesanan = Pesanan::whereIn('id_jasa', $jasas)->get();
-
-		foreach ($pesanan as $key) {
-			$pesanans[] = [$key->id];	
-		};
-
-		$tracking = Tracking::whereIn('id_pesanan', $pesanans)->get();
-
-		return view('auth.mitra.pesanan', compact('pesanan','tracking'));
+		return view('auth.mitra.pesanan');
 	}
 
     // ACTION

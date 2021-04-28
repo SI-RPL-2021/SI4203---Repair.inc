@@ -5,16 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Kategori;
 use App\Jasa;
-use App\Artikel;
 
 class HomeController extends Controller
 {
 	public function home(){
 		$kategoris = Kategori::limit(4)->get();
 		$jasa = Jasa::limit(8)->get();
-		$artikel = Artikel::limit(8)->get();
 
-		return view('auth.home.home', compact('kategoris','jasa','artikel'));
+		return view('auth.home.home', compact('kategoris','jasa'));
 	}
 
 	public function kategori(){
@@ -48,20 +46,5 @@ class HomeController extends Controller
 		$kategoris = Kategori::limit(4)->get();
 
 		return view('auth.home.register', compact('kategoris'));
-	}
-
-	public function artikel(){
-		$kategoris = Kategori::limit(4)->get();
-		$artikel = Artikel::all();
-
-		return view('auth.home.artikel', compact('artikel','kategoris'));
-	}
-
-	public function artikel_detail($id){
-		$kategoris = Kategori::limit(4)->get();
-		$artikel = Artikel::where('id', $id)->get();
-		$artikels = Artikel::limit(5)->get();
-
-		return view('auth.home.artikel-detail', compact('artikel','kategoris','artikels'));
 	}
 }

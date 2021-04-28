@@ -1,13 +1,13 @@
 @extends('app')
 
 @section('title')
-Register | Repair-Inc
+Register | Repair-Inch
 @endsection
 
 @section('content')
 
 <div class="register-section section mt-90 mb-90">
-	<div class="container mb10">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-3 col-12 d-flex">
 			</div>
@@ -32,10 +32,10 @@ Register | Repair-Inc
 							<div class="col-12 mb-20">
 								<input type="password" placeholder="Password" name="password">
 							</div>
-							<div class="col-12 mb-20">
-								<textarea name="alamat" placeholder="Alamat"></textarea>
+							<div class="col-12 mb-30 mt-2">
+								<input type="alamat" placeholder="Alamat" name="alamat">
 							</div>
-							<div class="col-12 text-right">
+							<div class="col-12 mb-4 text-center mt-5">
 								<input type="submit" value="Register"></input>
 							</div>
 						</div>

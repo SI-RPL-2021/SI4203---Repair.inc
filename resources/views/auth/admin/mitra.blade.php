@@ -1,11 +1,11 @@
 @extends('app-dashboard')
 
 @section('title')
-Mitra | Repair-Inc
+Mitra | Repair-Inch
 @endsection
 
 @section('content')
-<div class="page-title mb2">
+<div class="page-title">
 	<h3>Mitra</h3>
 </div>
 
@@ -34,10 +34,18 @@ Mitra | Repair-Inc
 						<td>{{ $cs->username }}</td>
 						<td>{{ $cs->ratting }}</td>
 						<td>{{ $cs->notelp }}</td>
-						<td class="text-right">
-							<button type="button" class="btn icon btn-warning" data-toggle="modal" data-target="#edit-{{ $cs->id }}"><i data-feather="edit"></i></button>
+						<td>
+							<button 
+							type="button" 
+							class="btn icon btn-warning"
+							data-toggle="modal" 
+							data-target="#edit-{{ $cs->id }}"><i data-feather="edit"></i></button>
 
-							<button type="button" class="btn icon btn-danger" data-toggle="modal" data-target="#hapus-{{ $cs->id }}"><i data-feather="delete"></i></button>
+							<button 
+							type="button" 
+							class="btn icon btn-danger"
+							data-toggle="modal" 
+							data-target="#hapus-{{ $cs->id }}"><i data-feather="delete"></i></button>
 						</td>
 					</tr>
 					@endforeach

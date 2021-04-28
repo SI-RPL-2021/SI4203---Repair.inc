@@ -1,15 +1,14 @@
 @extends('app-dashboard')
 
 @section('title')
-Admin | Repair-Inc
+Admin | Repair-Inch
 @endsection
 
 @section('content')
-<div class="page-title mb2">
+<div class="page-title">
 	<h3>Dashboard</h3>
 	<p class="text-subtitle text-muted">A good dashboard to display your statistics</p>
 </div>
-
 <section class="section">
 	<div class="row mb-2">
 		<div class="col-12 col-md-3">
@@ -224,7 +223,8 @@ Admin | Repair-Inc
 							<td class='col-3'>UI Design</td>
 							<td class='col-6'>
 								<div class="progress progress-info">
-									<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="0"
+									aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</td>
 							<td class='col-3 text-center'>60%</td>
@@ -233,7 +233,8 @@ Admin | Repair-Inc
 							<td class='col-3'>VueJS</td>
 							<td class='col-6'>
 								<div class="progress progress-success">
-									<div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="0"
+									aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</td>
 							<td class='col-3 text-center'>30%</td>
@@ -242,7 +243,8 @@ Admin | Repair-Inc
 							<td class='col-3'>Laravel</td>
 							<td class='col-6'>
 								<div class="progress progress-danger">
-									<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="0"
+									aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</td>
 							<td class='col-3 text-center'>50%</td>
@@ -251,7 +253,8 @@ Admin | Repair-Inc
 							<td class='col-3'>ReactJS</td>
 							<td class='col-6'>
 								<div class="progress progress-primary">
-									<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="0"
+									aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</td>
 							<td class='col-3 text-center'>80%</td>
@@ -260,7 +263,8 @@ Admin | Repair-Inc
 							<td class='col-3'>Go</td>
 							<td class='col-6'>
 								<div class="progress progress-secondary">
-									<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="0"
+									aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</td>
 							<td class='col-3 text-center'>65%</td>

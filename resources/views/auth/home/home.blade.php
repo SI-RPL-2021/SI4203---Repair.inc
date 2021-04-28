@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Repair-Inc
+Repair-Inch
 @endsection
 
 @section('content')
@@ -13,9 +13,9 @@ Repair-Inc
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
-								<h2>HURRY UP!</h2>
-								<h1><span>uPhone X</span></h1>
-								<h1>IT’S <span class="big">29%</span> OFF</h1>
+								<h2>Welcome to</h2>
+								<h1><span>Repair.inc</span></h1>
+								<h1>a <span class="big">29%</span> OFF</h1>
 								<a href="#">get it now</a>
 							</div>
 
@@ -26,9 +26,9 @@ Repair-Inc
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
-								<h2>HURRY UP!</h2>
-								<h1><span>GL G6</span></h1>
-								<h1>IT’S <span class="big">35%</span> OFF</h1>
+								<h2>Repair.inc</h2>
+								<h1><span>asdasdasd</span></h1>
+								<h1>Iasdaasd <span class="big">35%</span> OFF</h1>
 								<a href="#">get it now</a>
 							</div>
 
@@ -144,7 +144,7 @@ Repair-Inc
 						<div class="ee-product">
 							<div class="image">
 								<a href="{{ route('jasa.detail', $js->id) }}" class="img">
-									<img src="{{ $js->gambar }}" alt="Product Image">
+									<img src="assets/images/product/product-5.png" alt="Product Image">
 								</a>
 							</div>
 
@@ -175,7 +175,7 @@ Repair-Inc
 </div>
 
 <div class="product-section section mb-60">
-	<div class="container mb10">
+	<div class="container">
 		<div class="row">
 
 			<!-- Section Title Start -->
@@ -187,30 +187,20 @@ Repair-Inc
 
 			<div class="col-12">
 				<div class="row">
-
-					@foreach($artikel as $ar)
 					<div class="col-xl-4 col-lg-4 col-md-6 col-12 pb-30 pt-10">
-						<div class="ee-blog">
-							<a href="{{ route('artikel.detail', $ar->id) }}" class="image">
-								<img src="{{ $ar->gambar }}" alt="Blog Image">
-							</a>
+						<div class="ee-product">
+							<div class="image">
+								<a href="single-product.html" class="img">
+									<img src="assets/images/product/product-16.png" alt="Product Image">
+								</a>
+							</div>
 							<div class="content">
-								<h3>
-									<a href="single-blog-left-sidebar.html">
-										{{ $ar->judul }}
-									</a>
-								</h3>
-								<ul class="meta">
-									<li>
-										<a href="{{ route('artikel.detail', $ar->id) }}">{{ \Carbon\Carbon::parse($ar->created_at)->isoFormat('dddd, D MMMM Y') }}</a>
-									</li>
-								</ul>
-								<p>{!! Str::limit($ar->artikel, 100, '...') !!}</p>
+								<div class="category-title">
+									<h5 class="title"><a href="single-product.html">Nexo Andriod TV Box</a></h5>
+								</div>
 							</div>
 						</div>
 					</div>
-					@endforeach
-
 				</div>
 			</div>
 

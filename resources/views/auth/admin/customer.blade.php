@@ -1,16 +1,19 @@
 @extends('app-dashboard')
 
 @section('title')
-Customer | Repair-Inc
+Customer | Repair-Inch
 @endsection
 
 @section('content')
-<div class="page-title mb2">
+<div class="page-title">
 	<h3>Customer</h3>
 </div>
 
 <section class="section">
 	<div class="card">
+		<div class="card-header">
+			Simple Datatable
+		</div>
 		<div class="card-body">
 			<table class='table table-striped' id="table1">
 				<thead>
@@ -27,10 +30,18 @@ Customer | Repair-Inc
 						<td>{{ $cs->username }}</td>
 						<td>{{ $cs->email }}</td>
 						<td>{{ $cs->notelp }}</td>
-						<td class="text-right">
-							<button type="button" class="btn icon btn-warning" data-toggle="modal" data-target="#edit-{{ $cs->id }}"><i data-feather="edit"></i></button>
+						<td>
+							<button 
+							type="button" 
+							class="btn icon btn-warning"
+							data-toggle="modal" 
+							data-target="#edit-{{ $cs->id }}"><i data-feather="edit"></i></button>
 
-							<button type="button" class="btn icon btn-danger" data-toggle="modal" data-target="#hapus-{{ $cs->id }}"><i data-feather="delete"></i></button>
+							<button 
+							type="button" 
+							class="btn icon btn-danger"
+							data-toggle="modal" 
+							data-target="#hapus-{{ $cs->id }}"><i data-feather="delete"></i></button>
 						</td>
 					</tr>
 					@endforeach

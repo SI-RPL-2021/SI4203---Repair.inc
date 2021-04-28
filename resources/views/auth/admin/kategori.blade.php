@@ -1,11 +1,11 @@
 @extends('app-dashboard')
 
 @section('title')
-Kategori | Repair-Inc
+Kategori | Repair-Inch
 @endsection
 
 @section('content')
-<div class="page-title mb2">
+<div class="page-title">
 	<h3>Kategori</h3>
 </div>
 
@@ -20,7 +20,6 @@ Kategori | Repair-Inc
 			<table class='table table-striped' id="table1">
 				<thead>
 					<tr>
-						<th>Gambar</th>
 						<th>Nama</th>
 						<th></th>
 					</tr>
@@ -28,12 +27,19 @@ Kategori | Repair-Inc
 				<tbody>
 					@foreach($kategori as $cs)
 					<tr>
-						<td><img src="{{ $cs->gambar }}" height="100px"></td>
 						<td>{{ $cs->nama }}</td>
-						<td class="text-right">
-							<button type="button" class="btn icon btn-warning" data-toggle="modal" data-target="#edit-{{ $cs->id }}"><i data-feather="edit"></i></button>
+						<td>
+							<button 
+							type="button" 
+							class="btn icon btn-warning"
+							data-toggle="modal" 
+							data-target="#edit-{{ $cs->id }}"><i data-feather="edit"></i></button>
 
-							<button type="button" class="btn icon btn-danger" data-toggle="modal" data-target="#hapus-{{ $cs->id }}"><i data-feather="delete"></i></button>
+							<button 
+							type="button" 
+							class="btn icon btn-danger"
+							data-toggle="modal" 
+							data-target="#hapus-{{ $cs->id }}"><i data-feather="delete"></i></button>
 						</td>
 					</tr>
 					@endforeach
@@ -74,7 +80,7 @@ Kategori | Repair-Inc
 </div>
 
 <div class="modal fade" id="edit-{{ $cs->id }}" tabindex="-1" role="dialog">
-	<form action="{{ route('admin.jasa.kategori.edit', $cs->id) }}" method="POST" enctype="multipart/form-data">
+	<form action="{{ route('admin.jasa.kategori.edit', $cs->id) }}" method="POST">
 		@csrf
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -88,13 +94,6 @@ Kategori | Repair-Inc
 					<div class="form-group">
 						<label for="nama">Nama</label>
 						<input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" value="{{ $cs->nama }}">
-					</div>
-					<div class="form-file">
-						<input type="file" class="form-file-input" id="gambar" name="gambar">
-						<label class="form-file-label" for="gambar">
-							<span class="form-file-text">Pilih Gambar...</span>
-							<span class="form-file-button">Cari</span>
-						</label>
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -115,7 +114,7 @@ Kategori | Repair-Inc
 @endforeach
 
 <div class="modal fade" id="add-new" tabindex="-1" role="dialog">
-	<form action="{{ route('admin.jasa.kategori.store') }}" method="POST" enctype="multipart/form-data">
+	<form action="{{ route('admin.jasa.kategori.store') }}" method="POST">
 		@csrf
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -129,13 +128,6 @@ Kategori | Repair-Inc
 					<div class="form-group">
 						<label for="nama">Nama</label>
 						<input type="text" class="form-control" id="nama" placeholder="Nama" name="nama">
-					</div>
-					<div class="form-file">
-						<input type="file" class="form-file-input" id="gambar" name="gambar">
-						<label class="form-file-label" for="gambar">
-							<span class="form-file-text">Pilih Gambar...</span>
-							<span class="form-file-button">Cari</span>
-						</label>
 					</div>
 				</div>
 				<div class="modal-footer">
