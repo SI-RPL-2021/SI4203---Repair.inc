@@ -30,7 +30,7 @@
 			</div>
 
 			<div class="col-lg-6 col-12 mb-50">
-				<form action="{{ route('customer.order.post') }}" method="POST"> {{-- <==tambahiin yang ada dalam action aja  --}}
+				<form action="#" method="POST"> {{-- <==tambahiin yang ada dalam action aja  --}}
 					@csrf
 					<div class="single-product-content">
 						<div class="head-content">

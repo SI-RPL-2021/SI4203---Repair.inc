@@ -50,7 +50,9 @@
 							<a href="{{ route('jasa.detail', $js->id) }}" class="mb-30">By {{ App\Mitra::where('id', $js->id_mitra)->value('nama') }}</a>
 
 							<div class="actions">
-								<input class="btn-prim" type="submit" value="Order">
+								<!-- <input class="btn-prim" type="submit" value="Order"> -->
+								<h4> <a href=#>Order</a></h4>
+
 							</div>
 						</div>
 

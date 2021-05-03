@@ -37,20 +37,4 @@ class CustomerController extends Controller
 
 		return redirect()->back();
 	}
-	
-	public function order()
-	{
-		$kategoris = Kategori::limit(4)->get();
-		$pesanan = Pesanan::where('id_customer'('customer')->user()->id)->get();
-
-		return view('auth.customer.order', compact('kategoris', 'pesanan'));
-	}
-
-	public function pembayaran($id)
-	{
-		$kategoris = Kategori::limit(4)->get();
-		$pesanan = Pesanan::where('id', $id)->get();
-
-		return view('auth.customer.pembayaran', compact('kategoris', 'pesanan'));
-	}
 }
