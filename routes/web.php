@@ -39,13 +39,6 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
 			Route::post('/delete/{id}', 'KategoriController@delete')->name('admin.jasa.kategori.delete');
 		});
 	});
-
-	Route::prefix('artikel')->group(function () {
-		Route::get('/', 'AdminController@artikel')->name('admin.artikel');
-		Route::post('/store', 'ArtikelController@store')->name('admin.artikel.store');
-		Route::post('/edit/{id}', 'ArtikelController@edit')->name('admin.artikel.edit');
-		Route::post('/delete/{id}', 'ArtikelController@delete')->name('admin.artikel.delete');
-	});
 });
 
 

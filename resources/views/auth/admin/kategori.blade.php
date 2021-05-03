@@ -5,7 +5,7 @@ Kategori | Repair-Inch
 @endsection
 
 @section('content')
-<div class="page-title">
+<div class="page-title mb2">
 	<h3>Kategori</h3>
 </div>
 
@@ -20,6 +20,7 @@ Kategori | Repair-Inch
 			<table class='table table-striped' id="table1">
 				<thead>
 					<tr>
+						<th>Gambar</th>
 						<th>Nama</th>
 						<th></th>
 					</tr>
@@ -27,8 +28,9 @@ Kategori | Repair-Inch
 				<tbody>
 					@foreach($kategori as $cs)
 					<tr>
+						<td><img src="{{ $cs->gambar }}" height="100px"></td>
 						<td>{{ $cs->nama }}</td>
-						<td>
+						<td class="text-right">
 							<button 
 							type="button" 
 							class="btn icon btn-warning"
@@ -80,7 +82,7 @@ Kategori | Repair-Inch
 </div>
 
 <div class="modal fade" id="edit-{{ $cs->id }}" tabindex="-1" role="dialog">
-	<form action="{{ route('admin.jasa.kategori.edit', $cs->id) }}" method="POST">
+	<form action="{{ route('admin.jasa.kategori.edit', $cs->id) }}" method="POST" enctype="multipart/form-data">
 		@csrf
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -94,6 +96,13 @@ Kategori | Repair-Inch
 					<div class="form-group">
 						<label for="nama">Nama</label>
 						<input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" value="{{ $cs->nama }}">
+					</div>
+					<div class="form-file">
+						<input type="file" class="form-file-input" id="gambar" name="gambar">
+						<label class="form-file-label" for="gambar">
+							<span class="form-file-text">Pilih Gambar...</span>
+							<span class="form-file-button">Cari</span>
+						</label>
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -114,7 +123,7 @@ Kategori | Repair-Inch
 @endforeach
 
 <div class="modal fade" id="add-new" tabindex="-1" role="dialog">
-	<form action="{{ route('admin.jasa.kategori.store') }}" method="POST">
+	<form action="{{ route('admin.jasa.kategori.store') }}" method="POST" enctype="multipart/form-data">
 		@csrf
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -128,6 +137,13 @@ Kategori | Repair-Inch
 					<div class="form-group">
 						<label for="nama">Nama</label>
 						<input type="text" class="form-control" id="nama" placeholder="Nama" name="nama">
+					</div>
+					<div class="form-file">
+						<input type="file" class="form-file-input" id="gambar" name="gambar">
+						<label class="form-file-label" for="gambar">
+							<span class="form-file-text">Pilih Gambar...</span>
+							<span class="form-file-button">Cari</span>
+						</label>
 					</div>
 				</div>
 				<div class="modal-footer">

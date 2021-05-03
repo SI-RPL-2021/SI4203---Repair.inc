@@ -13,7 +13,7 @@ Repair-Inch
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
-								<h2>Welcome to</h2>
+								<h2>Selamat Datang di</h2>
 								<h1><span>Repair.inc</span></h1>
 								<h1>a <span class="big">29%</span> OFF</h1>
 								<a href="#">get it now</a>

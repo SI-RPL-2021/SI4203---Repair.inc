@@ -4,22 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Customer;
+use App\Kategori;
+use App\Kategoti;
 use Illuminate\Support\Facades\Hash;
 
 class CustomerController extends Controller
 {
-	public function dashboard(){
+	public function dashboard()
+	{
 
 		return view('auth.customer.dashboard');
 	}
-public function delete($id){
+	public function delete($id)
+	{
 		$post = Customer::find($id);
 		$post->delete();
 
 		return redirect()->back();
 	}
 
-	public function edit(Request $request, $id){
+	public function edit(Request $request, $id)
+	{
 		$post = Customer::find($id);
 
 		$post->username = $request->username;

@@ -31,7 +31,7 @@
 
 					<div class="content">
 						<div class="head-content">
-							<div class="category-title">
+							<div class="category-title">q
 								<h5 class="title"><a href="{{ route('jasa.detail', $js->id) }}">{{ $js->nama }}</a></h5>
 							</div>
 
@@ -50,7 +50,9 @@
 							<a href="{{ route('jasa.detail', $js->id) }}" class="mb-30">By {{ App\Mitra::where('id', $js->id_mitra)->value('nama') }}</a>
 
 							<div class="actions">
-								<input class="btn-prim" type="submit" value="Order">
+								<!-- <input class="btn-prim" type="submit" value="Order"> -->
+								<h4> <a href=#>Order</a></h4>
+
 							</div>
 						</div>
 

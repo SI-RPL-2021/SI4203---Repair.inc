@@ -16,14 +16,26 @@ class MitraController extends Controller
 	}
 
 	public function jasa(){
-		$jasa = Jasa::where('id_mitra', Auth::guard('mitra')->user()->id)->get();
+		$jasa = Jasa::where('id_mitra' Auth::guard('mitra')->user()->id)->get();
+		
 		$kategori = Kategori::all();
 
 		return view('auth.mitra.jasa', compact('jasa','kategori'));
 	}
 
-	public function pesanan(){
-		return view('auth.mitra.pesanan');
+	public function pesanan()
+	{
+		$jasa = Jasa::where('id_mitra', Auth::guard('mitra')->user()->id)->get();
+
+		$jasas = [];
+
+		foreach ($jasa as $key) {
+			$jasas[] = [$key->id];
+		};
+
+		$pesanan = Pesanan::whereIn('id_jasa', $jasas)->get();
+
+		return view('auth.mitra.pesanan', compact('pesanan'));
 	}
 
     // ACTION
