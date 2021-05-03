@@ -39,13 +39,6 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
 			Route::post('/delete/{id}', 'KategoriController@delete')->name('admin.jasa.kategori.delete');
 		});
 	});
-
-	Route::prefix('artikel')->group(function () {
-		Route::get('/', 'AdminController@artikel')->name('admin.artikel');
-		Route::post('/store', 'ArtikelController@store')->name('admin.artikel.store');
-		Route::post('/edit/{id}', 'ArtikelController@edit')->name('admin.artikel.edit');
-		Route::post('/delete/{id}', 'ArtikelController@delete')->name('admin.artikel.delete');
-	});
 });
 
 
@@ -71,4 +64,12 @@ Route::prefix('mitra')->middleware('auth:mitra')->group(function () {
 // CUSTOMER
 Route::prefix('customer')->middleware('auth:customer')->group(function () {
 	Route::get('/', 'CustomerController@dashboard')->name('');
+
+
+	Route::get('/', 'CustomerController@dashboard')->name('customer.dashboard');
+	Route::get('/order', 'CustomerController@order')->name('customer.order');
+	Route::get('/pembayaran/{id}', 'CustomerController@pembayaran')->name('customer.pembayaran');
+
+	Route::post('/order', 'PesananController@store')->name('customer.order.post');
+	Route::post('/kirim-bukti/{id}', 'PesananController@kirim_bukti')->name('customer.order.bukti.post');
 });

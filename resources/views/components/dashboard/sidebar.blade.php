@@ -41,7 +41,7 @@
 <div id="sidebar" class='active'>
 	<div class="sidebar-wrapper active">
 		<div class="sidebar-header">
-			<img src="{{asset('assets/admin/assets/images/logo.svg')}}" alt="" srcset="">
+			<img src="https://i.ibb.co/Yb4fYPc/Group-48.png" alt="no img" style="height: 40px;">
 		</div>
 		<div class="sidebar-menu">
 			<ul class="menu">

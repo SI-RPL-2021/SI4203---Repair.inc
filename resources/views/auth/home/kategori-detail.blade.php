@@ -31,7 +31,7 @@
 
 					<div class="content">
 						<div class="head-content">
-							<div class="category-title">
+							<div class="category-title">q
 								<h5 class="title"><a href="{{ route('jasa.detail', $js->id) }}">{{ $js->nama }}</a></h5>
 							</div>
 
