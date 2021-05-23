@@ -14,10 +14,32 @@ class MitraController extends Controller
 		return view('auth.mitra.dashboard');
 	}
 
-	public function pesanan(){
+	public function jasa(){
+		$jasa = Jasa::where('id_mitra', Auth::guard('mitra')->user()->id)->get();
+		$kategori = Kategori::all();
+
+		return view('auth.mitra.jasa', compact('jasa','kategori'));
+	}
+
+	public function pesanan()
+	{
+		$jasa = Jasa::where('id_mitra', Auth::guard('mitra')->user()->id)->get();
+
+		$jasas = [];
+
+		foreach ($jasa as $key) {
+			$jasas[] = [$key->id];	
+		};
+
+		$pesanans = [];
+
+		$pesanan = Pesanan::whereIn('id_jasa', $jasas)->get();
+
+		foreach ($pesanan as $key) {
+			$pesanans[] = [$key->id];	
+		};
 
 		return view('auth.mitra.pesanan');
-	}
     // ACTION
 	public function store(Request $request){
 		$post = New Mitra();

@@ -32,5 +32,8 @@ Route::prefix('mitra')->middleware('auth:mitra')->group(function () {
 	
 	Route::prefix('pesanan')->group(function () {
 		Route::get('/', 'MitraController@pesanan')->name('mitra.pesanan');
+		Route::get('/tolak/{id}', 'PesananController@tolak')->name('mitra.pesanan.tolak');
+		Route::get('/setujui/{id}', 'PesananController@setujui')->name('mitra.pesanan.setujui');
+		Route::get('/konfirmasi-selesai/{id}', 'PesananController@konfirmasi_selesai')->name('mitra.pesanan.konfirmasi_selesai');
 	});
 });
