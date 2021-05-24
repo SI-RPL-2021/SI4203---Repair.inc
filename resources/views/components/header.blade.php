@@ -2,14 +2,42 @@
 	<div class="header-top header-top-one header-top-border pt-10 pb-10">
 		<div class="container">
 			<div class="row align-items-center justify-content-between">
-				<div class="col mt-10 mb-10"></div>
+				<div class="col mt-10 mb-10">
+					@if (Auth::guard('customer'))
+					@auth('customer')
+					<div class="header-links">
+						<a href="{{ route('customer.order') }}">
 
-				<div class="col order-12 order-xs-12 order-lg-2 mt-10 mb-10"></div>
+							<span>History Order</span>
+						</a>
+					</div>
+					@else
+					@endauth
+					@endif
+				</div>
+
+				<div class="col order-12 order-xs-12 order-lg-2 mt-10 mb-10">
+				</div>
 
 				<div class="col order-2 order-xs-2 order-lg-12 mt-10 mb-10">
 					<div class="header-account-links">
-						<a href="/"><i class="icofont icofont-user-alt-7"></i> <span>my account</span></a>
-						<a href="{{ route('login') }}"><i class="icofont icofont-login d-none"></i> <span>Login</span></a>
+
+						@if (Auth::guard('customer'))
+						@auth('customer')
+						<a href="/">
+							<i class="icofont icofont-user-alt-7"></i>
+							<span>{{ Auth::guard('customer')->user()->username }}</span>
+						</a>
+						<a href="/logout">
+							<i class="icofont icofont-login d-none"></i> <span>Logout</span>
+						</a>
+						@else
+						<a href="{{ route('login') }}">
+							<i class="icofont icofont-login d-none"></i> <span>Login</span>
+						</a>
+						@endauth
+						@endif
+
 					</div>
 				</div>
 			</div>

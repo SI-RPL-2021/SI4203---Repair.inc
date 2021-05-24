@@ -2,7 +2,7 @@
 
 @section('title')
 @foreach($jasa as $js)
-{{ $js->nama }} | Repair-Inc
+{{ $js->nama }} | Repair-Inch
 @endforeach
 @endsection
 
@@ -30,7 +30,7 @@
 			</div>
 
 			<div class="col-lg-6 col-12 mb-50">
-				<form action="#" method="POST"> {{-- <==tambahiin yang ada dalam action aja  --}}
+				<form action="{{ route('customer.order.post') }}" method="POST">
 					@csrf
 					<div class="single-product-content">
 						<div class="head-content">

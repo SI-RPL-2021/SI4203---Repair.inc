@@ -13,7 +13,6 @@ Route::post('/login', 'LoginController@postLogin');
 Route::post('/register/post', 'LoginController@register_store')->name('register.store');
 Route::get('/logout', 'LoginController@logout');
 
-
 // ADMIN
 Route::prefix('admin')->middleware('auth:admin')->group(function () {
 	Route::get('/', 'AdminController@dashboard')->name('admin.dashboard');
@@ -63,5 +62,16 @@ Route::prefix('mitra')->middleware('auth:mitra')->group(function () {
 
 // CUSTOMER
 Route::prefix('customer')->middleware('auth:customer')->group(function () {
-	Route::get('/', 'CustomerController@dashboard')->name('');
+	Route::get('/', 'CustomerController@dashboard')->name('customer.dashboard');
+	Route::get('/order', 'CustomerController@order')->name('customer.order');
+	Route::get('/pembayaran/{id}', 'CustomerController@pembayaran')->name('customer.pembayaran');
+
+	Route::get('/proses/{id}', 'CustomerController@proses')->name('customer.proses');
+
+	Route::post('/garansi/post', 'GaransiController@store')->name('customer.garansi.store');
+	Route::post('/garansi/edit/{id}', 'GaransiController@edit')->name('customer.garansi.edit');
+	Route::post('/garansi/delete/{id}', 'GaransiController@delete')->name('customer.garansi.delete');
+
+	Route::post('/order', 'PesananController@store')->name('customer.order.post');
+	Route::post('/kirim-bukti/{id}', 'PesananController@kirim_bukti')->name('customer.order.bukti.post');
 });
