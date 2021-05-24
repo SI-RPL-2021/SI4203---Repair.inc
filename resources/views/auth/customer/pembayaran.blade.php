@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Pembayaran | Repair-Inch
+Pembayaran | Repair.Inch
 @endsection
 
 @section('content')

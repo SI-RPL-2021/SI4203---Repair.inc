@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 @extends('app-dashboard')
 
 @section('title')
-Customer | Repair.Inc
+Customer | Repair
 @endsection
 
 @section('content')
@@ -225,8 +224,7 @@ Customer | Repair.Inc
 							<td class='col-3'>UI Design</td>
 							<td class='col-6'>
 								<div class="progress progress-info">
-									<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="0"
-									aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</td>
 							<td class='col-3 text-center'>60%</td>
@@ -235,8 +233,7 @@ Customer | Repair.Inc
 							<td class='col-3'>VueJS</td>
 							<td class='col-6'>
 								<div class="progress progress-success">
-									<div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="0"
-									aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</td>
 							<td class='col-3 text-center'>30%</td>
@@ -245,8 +242,7 @@ Customer | Repair.Inc
 							<td class='col-3'>Laravel</td>
 							<td class='col-6'>
 								<div class="progress progress-danger">
-									<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="0"
-									aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</td>
 							<td class='col-3 text-center'>50%</td>
@@ -255,8 +251,7 @@ Customer | Repair.Inc
 							<td class='col-3'>ReactJS</td>
 							<td class='col-6'>
 								<div class="progress progress-primary">
-									<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="0"
-									aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</td>
 							<td class='col-3 text-center'>80%</td>
@@ -265,8 +260,7 @@ Customer | Repair.Inc
 							<td class='col-3'>Go</td>
 							<td class='col-6'>
 								<div class="progress progress-secondary">
-									<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="0"
-									aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</td>
 							<td class='col-3 text-center'>65%</td>
@@ -278,18 +272,3 @@ Customer | Repair.Inc
 	</div>
 </section>
 @endsection
-=======
-<!DOCTYPE html>
-<html>
-<head>
-  <title>customer</title>
-</head>
-<body>
-
-  ini customer
-
-  <a href="/logout">logout</a>
-
-</body>
-</html>
->>>>>>> origin/Firyal_1202180097

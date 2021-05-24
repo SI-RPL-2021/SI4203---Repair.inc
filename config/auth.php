@@ -57,8 +57,6 @@ return [
             'provider' => 'admins',
         ],
 
-<<<<<<< HEAD:config/auth.php
-<<<<<<< HEAD:config/auth.php
         'mitra' => [
           'driver' => 'session',
           'provider' => 'mitras',
@@ -69,20 +67,6 @@ return [
             'provider' => 'mitras',
         ],
 
-=======
->>>>>>> origin/Ryan_1202184226:Repair.inc/config/auth.php
-=======
-        'mitra' => [
-            'driver' => 'session',
-            'provider' => 'mitras',
-            ],
-    
-            'mitra-api' => [
-            'driver' => 'token',
-            'provider' => 'mitras',
-            ],
-
->>>>>>> origin/Firyal_1202180097:Repair.inc/config/auth.php
         'customer' => [
           'driver' => 'session',
           'provider' => 'customers',
@@ -117,20 +101,11 @@ return [
             'model' => App\Customer::class,
         ],
 
-<<<<<<< HEAD:config/auth.php
-<<<<<<< HEAD:config/auth.php
-=======
->>>>>>> origin/Firyal_1202180097:Repair.inc/config/auth.php
         'mitras' => [
             'driver' => 'eloquent',
             'model' => App\Mitra::class,
         ],
 
-<<<<<<< HEAD:config/auth.php
-=======
->>>>>>> origin/Ryan_1202184226:Repair.inc/config/auth.php
-=======
->>>>>>> origin/Firyal_1202180097:Repair.inc/config/auth.php
         'admins' => [
           'driver' => 'eloquent',
           'model' => App\Admin::class,

@@ -2,96 +2,13 @@
 
 @section('title')
 @foreach($pesanan as $ps)
-<<<<<<< HEAD
-{{ App\Kategori::where('id', App\Jasa::where('id', $ps->id_jasa)->value('id_kategori'))->value('nama') }}, {{ App\Jasa::where('id', $ps->id_jasa)->value('nama') }} | Repair-Inc
-=======
 {{ App\Kategori::where('id', App\Jasa::where('id', $ps->id_jasa)->value('id_kategori'))->value('nama') }}, {{ App\Jasa::where('id', $ps->id_jasa)->value('nama') }} | Repair-Inch
->>>>>>> origin/Firyal_1202180097
 @endforeach
 @endsection
 
 @section('css-plus')
 <style type="text/css">
     .star-rating__stars {
-<<<<<<< HEAD
-        position: relative;
-        height: 5rem;
-        width: 25rem;
-        background: url({{asset('assets/off.svg')
-    }
-    }
-
-    );
-    background-size: 5rem 5rem;
-    }
-
-    .star-rating__label {
-        position: absolute;
-        height: 100%;
-        background-size: 5rem 5rem;
-    }
-
-    .star-rating__input {
-        margin: 0;
-        position: absolute;
-        height: 1px;
-        width: 1px;
-        overflow: hidden;
-        clip: rect(1px, 1px, 1px, 1px);
-    }
-
-    .star-rating__stars .star-rating__label:nth-of-type(1) {
-        z-index: 5;
-        width: 20%;
-    }
-
-    .star-rating__stars .star-rating__label:nth-of-type(2) {
-        z-index: 4;
-        width: 40%;
-    }
-
-    .star-rating__stars .star-rating__label:nth-of-type(3) {
-        z-index: 3;
-        width: 60%;
-    }
-
-    .star-rating__stars .star-rating__label:nth-of-type(4) {
-        z-index: 2;
-        width: 80%;
-    }
-
-    .star-rating__stars .star-rating__label:nth-of-type(5) {
-        z-index: 1;
-        width: 100%;
-    }
-
-    .star-rating__input:checked+.star-rating__label,
-    .star-rating__input:focus+.star-rating__label,
-    .star-rating__label:hover {
-        background-image: url({{asset('assets/on.svg')
-    }
-    }
-
-    );
-    }
-
-    .star-rating__label:hover~.star-rating__label {
-        background-image: url({{asset('assets/off.svg')
-    }
-    }
-
-    );
-    }
-
-    .star-rating__input:focus~.star-rating__focus {
-        position: absolute;
-        top: -.25em;
-        right: -.25em;
-        bottom: -.25em;
-        left: -.25em;
-        outline: 0.25rem solid lightblue;
-    }
-=======
       position: relative;
       height: 5rem;
       width: 25rem;
@@ -156,7 +73,6 @@
   left: -.25em;
   outline: 0.25rem solid lightblue;
 }
->>>>>>> origin/Firyal_1202180097
 </style>
 @endsection
 
@@ -194,46 +110,24 @@
 
                 <div class="row">
                     <div class="col-12">
-<<<<<<< HEAD
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-garansi">Klaim Garansi</button>
+                      
 
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-feedback">Kirim Feedback</button>
-
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-ratting">Kirim Ratting</button>
-=======
-                        {{-- klik to garansi --}}
-                        <button 
-                        type="button" 
-                        class="btn btn-primary" 
-                        data-toggle="modal" 
-                        data-target="#modal-garansi">Klaim Garansi</button>
-                        {{-- end klik to garansi --}}
-
-                        {{-- klik to feedback --}}
                         <button 
                         type="button" 
                         class="btn btn-primary" 
                         data-toggle="modal" 
                         data-target="#modal-feedback">Kirim Feedback</button>
-                        {{-- end klik to feedback --}}
 
-                        {{-- klik to ratting --}}
                         <button 
                         type="button" 
                         class="btn btn-primary" 
                         data-toggle="modal" 
                         data-target="#modal-ratting">Kirim Ratting</button>
-                        {{-- end klik to ratting --}}
->>>>>>> origin/Firyal_1202180097
 
                     </div>
                 </div>
             </div>
 
-<<<<<<< HEAD
-
-=======
-            {{-- TRACKING --}}
             <div class="col-12 col-md-6">
                 <div class="vertical-timeline vertical-timeline--animate vertical-timeline--one-column">
 
@@ -324,17 +218,11 @@
 
                 </div>
             </div>
-            {{-- END TRACKING --}}
->>>>>>> origin/Firyal_1202180097
 
         </div>
     </div>
 </div>
 
-<<<<<<< HEAD
-=======
-{{-- GARANSI --}}
->>>>>>> origin/Firyal_1202180097
 <div class="modal fade" id="modal-garansi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     @if($garansi_tes == 0)
     <form action="{{ route('customer.garansi.store') }}" method="POST">
@@ -343,15 +231,11 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Klaim Garansi</h5>
-<<<<<<< HEAD
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-=======
                     <button 
                     type="button" 
                     class="close" 
                     data-dismiss="modal" 
                     aria-label="Close"><span aria-hidden="true">&times;</span></button>
->>>>>>> origin/Firyal_1202180097
                 </div>
                 <div class="modal-body">
 
@@ -375,15 +259,11 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Klaim Garansi</h5>
-<<<<<<< HEAD
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-=======
                     <button 
                     type="button" 
                     class="close" 
                     data-dismiss="modal" 
                     aria-label="Close"><span aria-hidden="true">&times;</span></button>
->>>>>>> origin/Firyal_1202180097
                 </div>
                 <div class="modal-body">
 
@@ -402,14 +282,7 @@
 
     @endif
 </div>
-<<<<<<< HEAD
 
-
-@section('js-plus')
-=======
-{{-- END GARANSI --}}
-
-{{-- FEEDBACK --}}
 <div class="modal fade" id="modal-feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     @if($feedback_tes == 0)
     <form action="{{ route('customer.feedback.store') }}" method="POST">
@@ -469,9 +342,7 @@
 
     @endif
 </div>
-{{-- END FEEDBACK --}}
 
-{{-- RATTING --}}
 <div class="modal fade" id="modal-ratting" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <form action="{{ route('customer.order.ratting.post') }}" method="POST">
         @csrf
@@ -518,15 +389,11 @@
         </div>
     </form>
 </div>
-{{-- END RATTING --}}
 
 @endforeach
 @endsection
 
 @section('js-plus')
-
-{{-- TINY MCE --}}
->>>>>>> origin/Firyal_1202180097
 <script src="https://cdn.tiny.cloud/1/naiean50arcvcg7c4k08y4vbuuu0sg1n4s3q5jyab04r7rhi/tinymce/5/tinymce.min.js" referrerpolicy="origin">
 </script>
 
@@ -535,17 +402,10 @@
         selector: "textarea.tiny",
         menubar: false,
         plugins: [
-<<<<<<< HEAD
-            "advlist autolink lists link image charmap print preview anchor",
-            "searchreplace visualblocks code fullscreen",
-            "insertdatetime media table paste",
-            "autoresize"
-=======
         "advlist autolink lists link image charmap print preview anchor",
         "searchreplace visualblocks code fullscreen",
         "insertdatetime media table paste",
         "autoresize"
->>>>>>> origin/Firyal_1202180097
         ],
 
         image_title: true,
@@ -554,26 +414,12 @@
 
         toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
 
-<<<<<<< HEAD
-        file_picker_callback: function(cb, value, meta) {
-=======
         file_picker_callback: function (cb, value, meta) {
->>>>>>> origin/Firyal_1202180097
             var input = document.createElement('input');
             input.setAttribute('type', 'file');
             input.setAttribute('accept', 'image/*');
 
 
-<<<<<<< HEAD
-            input.onchange = function() {
-                var file = this.files[0];
-
-                var reader = new FileReader();
-                reader.onload = function() {
-
-                    var id = 'blobid' + (new Date()).getTime();
-                    var blobCache = tinymce.activeEditor.editorUpload.blobCache;
-=======
             input.onchange = function () {
                 var file = this.files[0];
 
@@ -582,18 +428,11 @@
 
                     var id = 'blobid' + (new Date()).getTime();
                     var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
->>>>>>> origin/Firyal_1202180097
                     var base64 = reader.result.split(',')[1];
                     var blobInfo = blobCache.create(id, file, base64);
                     blobCache.add(blobInfo);
 
-<<<<<<< HEAD
-                    cb(blobInfo.blobUri(), {
-                        title: file.name
-                    });
-=======
                     cb(blobInfo.blobUri(), { title: file.name });
->>>>>>> origin/Firyal_1202180097
                 };
                 reader.readAsDataURL(file);
             };
@@ -610,8 +449,4 @@
         }
     });
 </script>
-<<<<<<< HEAD
-=======
-{{-- END TINY MCE --}}
->>>>>>> origin/Firyal_1202180097
 @endsection

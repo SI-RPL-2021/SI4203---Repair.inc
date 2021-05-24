@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Customer;
-<<<<<<< HEAD
-=======
 use App\Kategori;
 use App\Pesanan;
 use App\Tracking;
@@ -13,8 +12,6 @@ use App\Garansi;
 use App\Feedback;
 use App\Chat;
 use Auth;
->>>>>>> origin/Firyal_1202180097
-use Illuminate\Support\Facades\Hash;
 
 class CustomerController extends Controller
 {
@@ -22,8 +19,44 @@ class CustomerController extends Controller
 
 		return view('auth.customer.dashboard');
 	}
-<<<<<<< HEAD
-public function delete($id){
+
+	public function order(){
+		$kategoris = Kategori::limit(4)->get();
+		$pesanan = Pesanan::where('id_customer', Auth::guard('customer')->user()->id)->get();
+
+		return view('auth.customer.order', compact('kategoris','pesanan'));
+	}
+
+	public function pembayaran($id){
+		$kategoris = Kategori::limit(4)->get();
+		$pesanan = Pesanan::where('id', $id)->get();
+
+		return view('auth.customer.pembayaran', compact('kategoris','pesanan'));
+	}
+
+	public function chat(){
+		$kategoris = Kategori::limit(4)->get();
+		$chat = Chat::where('id_customer', Auth::guard('customer')->user()->id)->get();
+
+		return view('auth.customer.chat', compact('chat','kategoris'));
+	}
+
+	public function proses($id){
+		$kategoris = Kategori::limit(4)->get();
+		$pesanan = Pesanan::where('id', $id)->get();
+		$tracking = Tracking::where('id_pesanan', $id)->get();
+		$garansi = Garansi::where('id_pesanan', $id)->get();
+		$feedback = Feedback::where('id_pesanan', $id)->get();
+
+		$selesai_tes = Tracking::where('id_pesanan', $id)->where('status', 'Selesai')->count();
+		$garansi_tes = Garansi::where('id_pesanan', $id)->count();
+		$feedback_tes = Feedback::where('id_pesanan', $id)->count();
+
+		return view('auth.customer.proses', compact('kategoris','pesanan','tracking','garansi','feedback','selesai_tes','garansi_tes','feedback_tes'));
+	}
+
+    // ACTION
+	public function delete($id){
 		$post = Customer::find($id);
 		$post->delete();
 
@@ -42,19 +75,5 @@ public function delete($id){
 		$post->save();
 
 		return redirect()->back();
-=======
-	public function pembayaran($id){
-		$kategoris = Kategori::limit(4)->get();
-		$pesanan = Pesanan::where('id', $id)->get();
-
-		return view('auth.customer.pembayaran', compact('kategoris','pesanan'));
-}
-	public function proses($id){
-		$kategoris = Kategori::limit(4)->get();
-		$pesanan = Pesanan::where('id', $id)->get();
-		$tracking = Tracking::where('id_pesanan', $id)->get();
-		$selesai_tes = Tracking::where('id_pesanan', $id)->where('status', 'Selesai')->count();
-		return view('auth.customer.proses', compact('kategoris','pesanan','tracking','selesai_tes'));
->>>>>>> origin/Firyal_1202180097
 	}
 }

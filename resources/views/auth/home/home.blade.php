@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Repair.Inc
+Repair.Inch
 @endsection
 
 @section('content')
@@ -13,8 +13,8 @@ Repair.Inc
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
-								<h2>HURRY UP!</h2>
-								<h1><span>uPhone X</span></h1>
+								<h2>Selamat Datang di</h2>
+								<h1><span>Repair.inc</span></h1>
 								<h1>IT’S <span class="big">29%</span> OFF</h1>
 								<a href="#">get it now</a>
 							</div>
@@ -26,7 +26,7 @@ Repair.Inc
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
-								<h2>HURRY UP!</h2>
+								<h2>Repair.inc</h2>
 								<h1><span>GL G6</span></h1>
 								<h1>IT’S <span class="big">35%</span> OFF</h1>
 								<a href="#">get it now</a>
@@ -137,24 +137,22 @@ Repair.Inc
 			<div class="col-12">
 				<div class="row">
 
-<<<<<<< HEAD
-=======
-					
+					@foreach($jasa as $js)
 					<div class="col-xl-3 col-lg-4 col-md-6 col-12 pb-30 pt-10">
 						<div class="ee-product">
 							<div class="image">
-								<a href="#!" class="img">
-									<img src="assets/images/product/product-5.png" alt="Product Image">
+								<a href="{{ route('jasa.detail', $js->id) }}" class="img">
+									<img src="{{ $js->gambar }}" alt="Product Image">
 								</a>
 							</div>
 
 							<div class="content">
 								<div class="category-title">
-									<a href="#!" class="cat">Nama Kategori</a>
-									<h5 class="title"><a href="#!">Nama Jasa</a></h5>
+									<a href="{{ route('kategori.detail', $js->id_kategori) }}" class="cat">{{ App\Kategori::where('id', $js->id_kategori)->value('nama') }}</a>
+									<h5 class="title"><a href="{{ route('jasa.detail', $js->id) }}">{{ $js->nama }}</a></h5>
 								</div>
 								<div class="price-ratting">
-									<h5 class="price">Rp 12000</h5>
+									<h5 class="price">Rp {{ number_format($js->harga) }}</h5>
 									<div class="ratting">
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -166,8 +164,8 @@ Repair.Inc
 							</div>
 						</div>
 					</div>
+					@endforeach
 
->>>>>>> origin/Firyal_1202180097
 				</div>
 			</div>
 		</div>
@@ -175,11 +173,7 @@ Repair.Inc
 </div>
 
 <div class="product-section section mb-60">
-<<<<<<< HEAD
 	<div class="container mb10">
-=======
-	<div class="container">
->>>>>>> origin/Firyal_1202180097
 		<div class="row">
 
 			<!-- Section Title Start -->
@@ -189,47 +183,30 @@ Repair.Inc
 
 			<div class="col-12">
 				<div class="row">
-<<<<<<< HEAD
 
-					
+					@foreach($artikel as $ar)
 					<div class="col-xl-4 col-lg-4 col-md-6 col-12 pb-30 pt-10">
 						<div class="ee-blog">
-							<a href="#!" class="image">
-								<img src="#!" alt="Blog Image">
+							<a href="{{ route('artikel.detail', $ar->id) }}" class="image">
+								<img src="{{ $ar->gambar }}" alt="Blog Image">
 							</a>
 							<div class="content">
 								<h3>
 									<a href="single-blog-left-sidebar.html">
-										artikel
+										{{ $ar->judul }}
 									</a>
 								</h3>
 								<ul class="meta">
 									<li>
-										<a href="#!">11 april 2021</a>
+										<a href="{{ route('artikel.detail', $ar->id) }}">{{ \Carbon\Carbon::parse($ar->created_at)->isoFormat('dddd, D MMMM Y') }}</a>
 									</li>
 								</ul>
-								<p>teks artikel</p>
+								<p>{!! Str::limit($ar->artikel, 100, '...') !!}</p>
 							</div>
 						</div>
 					</div>
-					
+					@endforeach
 
-=======
-					<div class="col-xl-4 col-lg-4 col-md-6 col-12 pb-30 pt-10">
-						<div class="ee-product">
-							<div class="image">
-								<a href="single-product.html" class="img">
-									<img src="assets/images/product/product-16.png" alt="Product Image">
-								</a>
-							</div>
-							<div class="content">
-								<div class="category-title">
-									<h5 class="title"><a href="single-product.html">Nexo Andriod TV Box</a></h5>
-								</div>
-							</div>
-						</div>
-					</div>
->>>>>>> origin/Firyal_1202180097
 				</div>
 			</div>
 

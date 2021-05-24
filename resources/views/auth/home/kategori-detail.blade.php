@@ -2,7 +2,7 @@
 
 @section('title')
 @foreach($kategori as $kt)
-{{ $kt->nama }} | Repair-Inch
+{{ $kt->nama }} | Repair.Inch
 @endforeach
 @endsection
 
@@ -13,9 +13,7 @@
 		<div class="row">
 			<div class="col-12 mb-60">
 				@foreach($kategori as $kt)
-				<div class="section-title-one" data-title="Jasa {{ $kt->nama }}">
-					<h1>Jasa {{ $kt->nama }}</h1>
-				</div>
+				<div class="section-title-one" data-title="Jasa {{ $kt->nama }}"><h1>Jasa {{ $kt->nama }}</h1></div>
 				@endforeach
 			</div>
 

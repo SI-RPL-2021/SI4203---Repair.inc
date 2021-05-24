@@ -23,11 +23,7 @@ class Authenticate extends Middleware
     } else if (Auth::guard('mitra')->check()) {
 
       return redirect('/mitra');
-<<<<<<< HEAD
       
-=======
-
->>>>>>> origin/Firyal_1202180097
     } else if (Auth::guard('admin')->check()) {
 
       return redirect('/admin');

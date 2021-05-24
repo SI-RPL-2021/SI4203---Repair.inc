@@ -17,11 +17,11 @@ class JasaController extends Controller
 		$post->harga = $request->harga;
 		$post->ratting = 0;
 
-		// $gambar = $request->file('gambar');
-		// $nama_gambar = time() . '_' . '.' . $gambar->getClientOriginalExtension();
-		// $tujuan_upload 	= 'img/jasa';
-		// $gambar->move($tujuan_upload,$nama_gambar);
-		// $post->gambar ='/'.$tujuan_upload.'/'.$nama_gambar;
+		$gambar = $request->file('gambar');
+		$nama_gambar = time() . '_' . '.' . $gambar->getClientOriginalExtension();
+		$tujuan_upload 	= 'img/jasa';
+		$gambar->move($tujuan_upload,$nama_gambar);
+		$post->gambar ='/'.$tujuan_upload.'/'.$nama_gambar;
 
 		$post->save();
 

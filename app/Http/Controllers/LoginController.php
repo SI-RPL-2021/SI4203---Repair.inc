@@ -5,10 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Admin;
-<<<<<<< HEAD
-=======
-use App\Mitra;
->>>>>>> origin/Firyal_1202180097
+use App\Mitra; //<-- ini
 use App\Customer;
 use Auth;
 
@@ -20,17 +17,14 @@ class LoginController extends Controller
 		if (Auth::guard('admin')->attempt(['username' => $request->username, 'password' => $request->password])) {
 
 			return redirect()->intended('/admin');
-
-<<<<<<< HEAD
-=======
+			// line 21 - 25
 		} else if (Auth::guard('mitra')->attempt(['username' => $request->username, 'password' => $request->password])) {
 
 			return redirect()->intended('/mitra');
 
->>>>>>> origin/Firyal_1202180097
 		} else if (Auth::guard('customer')->attempt(['username' => $request->username, 'password' => $request->password])) {
 
-			return redirect()->intended('/customer');
+			return redirect()->intended('/');
 
 		} else {
 
@@ -42,13 +36,10 @@ class LoginController extends Controller
 	{
 		if (Auth::guard('admin')->check()) {
 			Auth::guard('admin')->logout();
-
-<<<<<<< HEAD
-=======
+		// line 40 - 43
 		} else if (Auth::guard('mitra')->check()) {
 			Auth::guard('mitra')->logout();
 
->>>>>>> origin/Firyal_1202180097
 		} else if (Auth::guard('customer')->check()) {
 			Auth::guard('customer')->logout();	
 		}
