@@ -40,6 +40,11 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
 Route::prefix('customer')->middleware('auth:customer')->group(function () {
 	Route::get('/', 'CustomerController@dashboard')->name('customer.dashboard');
 });
+Route::prefix('customer')->middleware('auth:customer')->group(function () {
+	Route::get('/proses/{id}', 'CustomerController@proses')->name('customer.proses'); 
+
+	Route::post('/ratting/post', 'RattingController@store')->name('customer.order.ratting.post');
+});
 
 // Mitra
 Route::prefix('mitra')->middleware('auth:mitra')->group(function () {
