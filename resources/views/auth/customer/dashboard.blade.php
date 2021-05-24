@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('app-dashboard')
 
 @section('title')
@@ -277,3 +278,18 @@ Customer | Repair.Inc
 	</div>
 </section>
 @endsection
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <title>customer</title>
+</head>
+<body>
+
+  ini customer
+
+  <a href="/logout">logout</a>
+
+</body>
+</html>
+>>>>>>> origin/Firyal_1202180097

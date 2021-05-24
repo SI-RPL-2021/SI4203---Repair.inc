@@ -1,11 +1,19 @@
 @extends('app-dashboard')
 
 @section('title')
+<<<<<<< HEAD
 Mitra | Repair-Inch
 @endsection
 
 @section('content')
 <div class="page-title">
+=======
+Mitra | Repair.Inc
+@endsection
+
+@section('content')
+<div class="page-title mb2">
+>>>>>>> origin/Firyal_1202180097
 	<h3>Mitra</h3>
 </div>
 
@@ -34,7 +42,11 @@ Mitra | Repair-Inch
 						<td>{{ $cs->username }}</td>
 						<td>{{ $cs->ratting }}</td>
 						<td>{{ $cs->notelp }}</td>
+<<<<<<< HEAD
 						<td>
+=======
+						<td class="text-right">
+>>>>>>> origin/Firyal_1202180097
 							<button 
 							type="button" 
 							class="btn icon btn-warning"

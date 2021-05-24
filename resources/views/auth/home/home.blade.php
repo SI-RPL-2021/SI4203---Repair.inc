@@ -137,6 +137,37 @@ Repair.Inc
 			<div class="col-12">
 				<div class="row">
 
+<<<<<<< HEAD
+=======
+					
+					<div class="col-xl-3 col-lg-4 col-md-6 col-12 pb-30 pt-10">
+						<div class="ee-product">
+							<div class="image">
+								<a href="#!" class="img">
+									<img src="assets/images/product/product-5.png" alt="Product Image">
+								</a>
+							</div>
+
+							<div class="content">
+								<div class="category-title">
+									<a href="#!" class="cat">Nama Kategori</a>
+									<h5 class="title"><a href="#!">Nama Jasa</a></h5>
+								</div>
+								<div class="price-ratting">
+									<h5 class="price">Rp 12000</h5>
+									<div class="ratting">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half-o"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+>>>>>>> origin/Firyal_1202180097
 				</div>
 			</div>
 		</div>
@@ -144,7 +175,11 @@ Repair.Inc
 </div>
 
 <div class="product-section section mb-60">
+<<<<<<< HEAD
 	<div class="container mb10">
+=======
+	<div class="container">
+>>>>>>> origin/Firyal_1202180097
 		<div class="row">
 
 			<!-- Section Title Start -->
@@ -154,6 +189,7 @@ Repair.Inc
 
 			<div class="col-12">
 				<div class="row">
+<<<<<<< HEAD
 
 					
 					<div class="col-xl-4 col-lg-4 col-md-6 col-12 pb-30 pt-10">
@@ -178,6 +214,22 @@ Repair.Inc
 					</div>
 					
 
+=======
+					<div class="col-xl-4 col-lg-4 col-md-6 col-12 pb-30 pt-10">
+						<div class="ee-product">
+							<div class="image">
+								<a href="single-product.html" class="img">
+									<img src="assets/images/product/product-16.png" alt="Product Image">
+								</a>
+							</div>
+							<div class="content">
+								<div class="category-title">
+									<h5 class="title"><a href="single-product.html">Nexo Andriod TV Box</a></h5>
+								</div>
+							</div>
+						</div>
+					</div>
+>>>>>>> origin/Firyal_1202180097
 				</div>
 			</div>
 

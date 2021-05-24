@@ -1,7 +1,11 @@
 @extends('app-dashboard')
 
 @section('title')
+<<<<<<< HEAD
 Mitra | Repair-Inc
+=======
+Mitra | Repair.Inc
+>>>>>>> origin/Firyal_1202180097
 @endsection
 
 @section('content')

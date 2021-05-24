@@ -22,7 +22,11 @@ class RedirectIfAuthenticated
 
             return redirect('/mitra');
 
+<<<<<<< HEAD
       } else if (Auth::guard('customer')->check()) {
+=======
+        } else if (Auth::guard('customer')->check()) {
+>>>>>>> origin/Firyal_1202180097
 
           return redirect('/customer');
 
