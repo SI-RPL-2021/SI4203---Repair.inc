@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Repair-Inc
+Repair.Inc
 @endsection
 
 @section('content')
@@ -13,27 +13,27 @@ Repair-Inc
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
-								<h2>Selamat Datang di</h2>
-								<h1><span>Repair.inc</span></h1>
-								<h1>a <span class="big">29%</span> OFF</h1>
+								<h2>HURRY UP!</h2>
+								<h1><span>uPhone X</span></h1>
+								<h1>IT’S <span class="big">29%</span> OFF</h1>
 								<a href="#">get it now</a>
 							</div>
 
 							<div class="hero-image col"><img src="assets/images/hero/hero-1.png" alt="Hero Image"></div>
-						</div>
+						</div>     
 					</div>
 
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
-								<h2>Repair.inc</h2>
-								<h1><span>asdasdasd</span></h1>
-								<h1>Iasdaasd <span class="big">35%</span> OFF</h1>
+								<h2>HURRY UP!</h2>
+								<h1><span>GL G6</span></h1>
+								<h1>IT’S <span class="big">35%</span> OFF</h1>
 								<a href="#">get it now</a>
 							</div>
 
 							<div class="hero-image col"><img src="assets/images/hero/hero-2.png" alt="Hero Image"></div>
-						</div>
+						</div>     
 					</div>
 
 					<div class="hero-item">
@@ -46,7 +46,7 @@ Repair-Inc
 							</div>
 
 							<div class="hero-image col"><img src="assets/images/hero/hero-3.png" alt="Hero Image"></div>
-						</div>
+						</div>     
 					</div>
 				</div>
 
@@ -131,42 +131,11 @@ Repair-Inc
 	<div class="container">
 		<div class="row">
 			<div class="col-12 mb-40">
-				<div class="section-title-one" data-title="Jasa Terbaru">
-					<h1>Jasa Terbaru</h1>
-				</div>
+				<div class="section-title-one" data-title="Jasa Terbaru"><h1>Jasa Terbaru</h1></div>
 			</div>
 
 			<div class="col-12">
 				<div class="row">
-
-					@foreach($jasa as $js)
-					<div class="col-xl-3 col-lg-4 col-md-6 col-12 pb-30 pt-10">
-						<div class="ee-product">
-							<div class="image">
-								<a href="{{ route('jasa.detail', $js->id) }}" class="img">
-									<img src="assets/images/product/product-5.png" alt="Product Image">
-								</a>
-							</div>
-
-							<div class="content">
-								<div class="category-title">
-									<a href="{{ route('kategori.detail', $js->id_kategori) }}" class="cat">{{ App\Kategori::where('id', $js->id_kategori)->value('nama') }}</a>
-									<h5 class="title"><a href="{{ route('jasa.detail', $js->id) }}">{{ $js->nama }}</a></h5>
-								</div>
-								<div class="price-ratting">
-									<h5 class="price">Rp {{ number_format($js->harga) }}</h5>
-									<div class="ratting">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-half-o"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					@endforeach
 
 				</div>
 			</div>
@@ -175,32 +144,40 @@ Repair-Inc
 </div>
 
 <div class="product-section section mb-60">
-	<div class="container">
+	<div class="container mb10">
 		<div class="row">
 
 			<!-- Section Title Start -->
 			<div class="col-12 mb-40">
-				<div class="section-title-one" data-title="Artikel Terbaru">
-					<h1>Artikel Terbaru</h1>
-				</div>
+				<div class="section-title-one" data-title="Artikel Terbaru"><h1>Artikel Terbaru</h1></div>
 			</div><!-- Section Title End -->
 
 			<div class="col-12">
 				<div class="row">
+
+					
 					<div class="col-xl-4 col-lg-4 col-md-6 col-12 pb-30 pt-10">
-						<div class="ee-product">
-							<div class="image">
-								<a href="single-product.html" class="img">
-									<img src="assets/images/product/product-16.png" alt="Product Image">
-								</a>
-							</div>
+						<div class="ee-blog">
+							<a href="#!" class="image">
+								<img src="#!" alt="Blog Image">
+							</a>
 							<div class="content">
-								<div class="category-title">
-									<h5 class="title"><a href="single-product.html">Nexo Andriod TV Box</a></h5>
-								</div>
+								<h3>
+									<a href="single-blog-left-sidebar.html">
+										artikel
+									</a>
+								</h3>
+								<ul class="meta">
+									<li>
+										<a href="#!">11 april 2021</a>
+									</li>
+								</ul>
+								<p>teks artikel</p>
 							</div>
 						</div>
 					</div>
+					
+
 				</div>
 			</div>
 

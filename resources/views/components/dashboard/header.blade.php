@@ -1,7 +1,14 @@
 <nav class="navbar navbar-header navbar-expand navbar-light">
 	<a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
-	<button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span></button>
+	<button 
+	class="btn navbar-toggler" 
+	type="button" 
+	data-toggle="collapse" 
+	data-target="#navbarSupportedContent"
+	aria-controls="navbarSupportedContent" 
+	aria-expanded="false" 
+	aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span></button>
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
@@ -10,7 +17,7 @@
 					<div class="avatar mr-1">
 						<img src="{{asset('assets/admin/assets/images/avatar/avatar-s-1.png')}}" alt="" srcset="">
 					</div>
-					<div class="d-none d-md-block d-lg-inline-block">Hi, Good Morning</div>
+					<div class="d-none d-md-block d-lg-inline-block">Hi, Saugi</div>
 				</a>
 
 				<div class="dropdown-menu dropdown-menu-right">

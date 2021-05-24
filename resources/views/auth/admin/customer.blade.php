@@ -1,19 +1,16 @@
 @extends('app-dashboard')
 
 @section('title')
-Customer | Repair-Inch
+Customer | Repair.Inc
 @endsection
 
 @section('content')
-<div class="page-title">
+<div class="page-title mb2">
 	<h3>Customer</h3>
 </div>
 
 <section class="section">
 	<div class="card">
-		<div class="card-header">
-			Simple Datatable
-		</div>
 		<div class="card-body">
 			<table class='table table-striped' id="table1">
 				<thead>
@@ -30,7 +27,7 @@ Customer | Repair-Inch
 						<td>{{ $cs->username }}</td>
 						<td>{{ $cs->email }}</td>
 						<td>{{ $cs->notelp }}</td>
-						<td>
+						<td class="text-right">
 							<button 
 							type="button" 
 							class="btn icon btn-warning"

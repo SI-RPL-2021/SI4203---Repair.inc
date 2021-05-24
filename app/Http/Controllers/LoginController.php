@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Admin;
-use App\Mitra;
 use App\Customer;
 use Auth;
 
@@ -17,10 +16,6 @@ class LoginController extends Controller
 		if (Auth::guard('admin')->attempt(['username' => $request->username, 'password' => $request->password])) {
 
 			return redirect()->intended('/admin');
-
-		} else if (Auth::guard('mitra')->attempt(['username' => $request->username, 'password' => $request->password])) {
-
-			return redirect()->intended('/mitra');
 
 		} else if (Auth::guard('customer')->attempt(['username' => $request->username, 'password' => $request->password])) {
 
@@ -36,9 +31,6 @@ class LoginController extends Controller
 	{
 		if (Auth::guard('admin')->check()) {
 			Auth::guard('admin')->logout();
-
-		} else if (Auth::guard('mitra')->check()) {
-			Auth::guard('mitra')->logout();
 
 		} else if (Auth::guard('customer')->check()) {
 			Auth::guard('customer')->logout();	
