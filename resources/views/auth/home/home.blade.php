@@ -1,7 +1,11 @@
 @extends('app')
 
 @section('title')
+<<<<<<< HEAD
 Repair.Inch
+=======
+Repair-Inch
+>>>>>>> yusuf_1202184304
 @endsection
 
 @section('content')
@@ -13,6 +17,7 @@ Repair.Inch
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
+<<<<<<< HEAD
 								<h2>Selamat Datang di</h2>
 								<h1><span>Repair.inc</span></h1>
 								<h1>IT’S <span class="big">29%</span> OFF</h1>
@@ -39,17 +44,23 @@ Repair.Inch
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
+=======
+>>>>>>> yusuf_1202184304
 								<h2>HURRY UP!</h2>
-								<h1><span>MSVII Case</span></h1>
-								<h1>IT’S <span class="big">15%</span> OFF</h1>
+								<h1><span>REPAIR.INC</span></h1>
+								<h1>IT’S <span class="big">29%</span> OFF</h1>
 								<a href="#">get it now</a>
 							</div>
+<<<<<<< HEAD
 
 							<div class="hero-image col"><img src="assets/images/hero/hero-3.png" alt="Hero Image"></div>
 						</div>     
+=======
+							<div class="hero-image col"><img src="https://i.ibb.co/HgpzYQw/Untitled-2.png" alt="Hero Image"></div>
+						</div>
+>>>>>>> yusuf_1202184304
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -101,14 +112,14 @@ Repair.Inch
 
 		<!-- About Image -->
 		<div class="about-image col-lg-6 mb-50">
-			<img src="assets/images/about/about-1.png" alt="">
+			<img src="https://s3-ap-southeast-1.amazonaws.com/apic-asset/services-banner/image_589317e146275.png" alt="no img" width="585" height="483">
 		</div>
 
 		<!-- About Content -->
 		<div class="about-content col-lg-6">
 			<div class="row">
 				<div class="col-12 mb-50">
-					<h1>WELCOME TO <span>E&amp;E.</span></h1>
+					<h1>WELCOME TO <span>Repair.inc</span></h1>
 					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
 				</div>
 

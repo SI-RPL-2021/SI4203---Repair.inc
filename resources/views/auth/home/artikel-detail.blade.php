@@ -2,7 +2,11 @@
 
 @section('title')
 @foreach($artikel as $ar)
+<<<<<<< HEAD
 {{ $ar->judul }} | Repair.Inch
+=======
+{{ $ar->judul }} | Repair-Inch
+>>>>>>> yusuf_1202184304
 @endforeach
 @endsection
 

@@ -1,7 +1,11 @@
 @extends('app-dashboard')
 
 @section('title')
+<<<<<<< HEAD
 Jasa | Repair.Inch
+=======
+Jasa | Repair-Inch
+>>>>>>> yusuf_1202184304
 @endsection
 
 @section('content')

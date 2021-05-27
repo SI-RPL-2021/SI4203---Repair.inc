@@ -82,9 +82,19 @@ Route::prefix('customer')->middleware('auth:customer')->group(function () {
 	Route::get('/', 'CustomerController@dashboard')->name('customer.dashboard');
 	Route::get('/order', 'CustomerController@order')->name('customer.order');
 	Route::get('/pembayaran/{id}', 'CustomerController@pembayaran')->name('customer.pembayaran');
+<<<<<<< HEAD
+=======
+	Route::get('/chat', 'CustomerController@chat')->name('customer.chat');
+>>>>>>> yusuf_1202184304
 	Route::get('/proses/{id}', 'CustomerController@proses')->name('customer.proses');
 
 	
+	Route::post('/feedback/post', 'FeedbackController@store')->name('customer.feedback.store');
+	Route::post('/feedback/edit/{id}', 'FeedbackController@edit')->name('customer.feedback.edit');
+	Route::post('/feedback/delete/{id}', 'FeedbackController@delete')->name('customer.feedback.delete');
+
+	Route::post('/ratting/post', 'RattingController@store')->name('customer.order.ratting.post');
+
 	Route::post('/feedback/post', 'FeedbackController@store')->name('customer.feedback.store');
 	Route::post('/feedback/edit/{id}', 'FeedbackController@edit')->name('customer.feedback.edit');
 	Route::post('/feedback/delete/{id}', 'FeedbackController@delete')->name('customer.feedback.delete');

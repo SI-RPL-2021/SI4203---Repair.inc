@@ -1,7 +1,11 @@
 @extends('app')
 
 @section('title')
+<<<<<<< HEAD
 Pembayaran | Repair.Inch
+=======
+Pembayaran | Repair-Inch
+>>>>>>> yusuf_1202184304
 @endsection
 
 @section('content')

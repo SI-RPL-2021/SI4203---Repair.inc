@@ -7,7 +7,11 @@
 					@auth('customer')
 					<div class="header-links">
 						<a href="{{ route('customer.order') }}">
+<<<<<<< HEAD
 							<img src="{{asset('assets/images/icons/histo.png')}}" alt="Car Icon"> 
+=======
+							<img src="{{asset('assets/images/icons/histo.png')}}" alt="Car Icon">
+>>>>>>> yusuf_1202184304
 							<span>History Order</span>
 						</a>
 					</div>

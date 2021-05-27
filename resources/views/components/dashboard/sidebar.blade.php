@@ -64,11 +64,42 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('admin.jasa') }}" class='sidebar-link'>
+<<<<<<< HEAD
 						<i data-feather="home" width="20"></i> 
 						<span>Jasa</span>
 					</a>
 				</li>
 				
+=======
+						<i data-feather="home" width="20"></i>
+						<span>Jasa</span>
+					</a>
+				</li>
+				<li class="sidebar-item 
+				{{ (request()->routeIs(
+
+					'admin.artikel'
+
+					)) ? 'active' : '' }}
+					">
+					<a href="{{ route('admin.artikel') }}" class='sidebar-link'>
+						<i data-feather="home" width="20"></i>
+						<span>Artikel</span>
+					</a>
+				</li>
+				<li class="sidebar-item 
+				{{ (request()->routeIs(
+
+					'admin.artikel'
+
+					)) ? 'active' : '' }}
+					">
+					<a href="{{ route('admin.artikel') }}" class='sidebar-link'>
+						<i data-feather="home" width="20"></i>
+						<span>Pesan</span>
+					</a>
+				</li>
+>>>>>>> yusuf_1202184304
 			</ul>
 		</div>
 		<button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
