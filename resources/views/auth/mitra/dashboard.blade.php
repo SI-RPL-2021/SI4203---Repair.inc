@@ -1,7 +1,7 @@
 @extends('app-dashboard')
 
 @section('title')
-Mitra | Repair-Inc
+Mitra | Repair-Inch
 @endsection
 
 @section('content')

@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Kategori;
+use App\Artikel;
 
-class KategoriController extends Controller
+class ArtikelController extends Controller
 {
 	public function store(Request $request){
-		$post = New Kategori();
-		$post->nama = $request->nama;
+		$post = New Artikel();
+		$post->judul = $request->judul;
+		$post->artikel = $request->artikel;
 
 		$gambar = $request->file('gambar');
 		$nama_gambar = time() . '_' . '.' . $gambar->getClientOriginalExtension();
-		$tujuan_upload 	= 'img/kategori';
+		$tujuan_upload 	= 'img/ahli';
 		$gambar->move($tujuan_upload,$nama_gambar);
 		$post->gambar ='/'.$tujuan_upload.'/'.$nama_gambar;
 
@@ -23,12 +24,13 @@ class KategoriController extends Controller
 	}
 
 	public function edit(Request $request, $id){
-		$post = Kategori::find($id);
-		$post->nama = $request->nama;
+		$post = Artikel::find($id);
+		$post->judul = $request->judul;
+		$post->artikel = $request->artikel;
 
 		$gambar = $request->file('gambar');
 		$nama_gambar = time() . '_' . '.' . $gambar->getClientOriginalExtension();
-		$tujuan_upload 	= 'img/kategori';
+		$tujuan_upload 	= 'img/ahli';
 		$gambar->move($tujuan_upload,$nama_gambar);
 		$post->gambar ='/'.$tujuan_upload.'/'.$nama_gambar;
 
@@ -38,7 +40,7 @@ class KategoriController extends Controller
 	}
 
 	public function delete($id){
-		$post = Kategori::find($id);
+		$post = Artikel::find($id);
 		$post->delete();
 
 		return redirect()->back();

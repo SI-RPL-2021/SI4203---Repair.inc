@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Repair-Inc
+Repair-Inch
 @endsection
 
 @section('content')
@@ -13,43 +13,15 @@ Repair-Inc
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
-								<h2>Selamat Datang di</h2>
-								<h1><span>Repair.inc</span></h1>
-								<h1>a <span class="big">29%</span> OFF</h1>
-								<a href="#">get it now</a>
-							</div>
-
-							<div class="hero-image col"><img src="assets/images/hero/hero-1.png" alt="Hero Image"></div>
-						</div>
-					</div>
-
-					<div class="hero-item">
-						<div class="row align-items-center justify-content-between">
-							<div class="hero-content col">
-								<h2>Repair.inc</h2>
-								<h1><span>asdasdasd</span></h1>
-								<h1>Iasdaasd <span class="big">35%</span> OFF</h1>
-								<a href="#">get it now</a>
-							</div>
-
-							<div class="hero-image col"><img src="assets/images/hero/hero-2.png" alt="Hero Image"></div>
-						</div>
-					</div>
-
-					<div class="hero-item">
-						<div class="row align-items-center justify-content-between">
-							<div class="hero-content col">
 								<h2>HURRY UP!</h2>
-								<h1><span>MSVII Case</span></h1>
-								<h1>IT’S <span class="big">15%</span> OFF</h1>
+								<h1><span>REPAIR.INC</span></h1>
+								<h1>IT’S <span class="big">29%</span> OFF</h1>
 								<a href="#">get it now</a>
 							</div>
-
-							<div class="hero-image col"><img src="assets/images/hero/hero-3.png" alt="Hero Image"></div>
+							<div class="hero-image col"><img src="https://i.ibb.co/HgpzYQw/Untitled-2.png" alt="Hero Image"></div>
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -101,14 +73,14 @@ Repair-Inc
 
 		<!-- About Image -->
 		<div class="about-image col-lg-6 mb-50">
-			<img src="assets/images/about/about-1.png" alt="">
+			<img src="https://s3-ap-southeast-1.amazonaws.com/apic-asset/services-banner/image_589317e146275.png" alt="no img" width="585" height="483">
 		</div>
 
 		<!-- About Content -->
 		<div class="about-content col-lg-6">
 			<div class="row">
 				<div class="col-12 mb-50">
-					<h1>WELCOME TO <span>E&amp;E.</span></h1>
+					<h1>WELCOME TO <span>Repair.inc</span></h1>
 					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
 				</div>
 
@@ -144,7 +116,7 @@ Repair-Inc
 						<div class="ee-product">
 							<div class="image">
 								<a href="{{ route('jasa.detail', $js->id) }}" class="img">
-									<img src="assets/images/product/product-5.png" alt="Product Image">
+									<img src="{{ $js->gambar }}" alt="Product Image">
 								</a>
 							</div>
 
@@ -175,7 +147,7 @@ Repair-Inc
 </div>
 
 <div class="product-section section mb-60">
-	<div class="container">
+	<div class="container mb10">
 		<div class="row">
 
 			<!-- Section Title Start -->
@@ -187,20 +159,30 @@ Repair-Inc
 
 			<div class="col-12">
 				<div class="row">
+
+					@foreach($artikel as $ar)
 					<div class="col-xl-4 col-lg-4 col-md-6 col-12 pb-30 pt-10">
-						<div class="ee-product">
-							<div class="image">
-								<a href="single-product.html" class="img">
-									<img src="assets/images/product/product-16.png" alt="Product Image">
-								</a>
-							</div>
+						<div class="ee-blog">
+							<a href="{{ route('artikel.detail', $ar->id) }}" class="image">
+								<img src="{{ $ar->gambar }}" alt="Blog Image">
+							</a>
 							<div class="content">
-								<div class="category-title">
-									<h5 class="title"><a href="single-product.html">Nexo Andriod TV Box</a></h5>
-								</div>
+								<h3>
+									<a href="single-blog-left-sidebar.html">
+										{{ $ar->judul }}
+									</a>
+								</h3>
+								<ul class="meta">
+									<li>
+										<a href="{{ route('artikel.detail', $ar->id) }}">{{ \Carbon\Carbon::parse($ar->created_at)->isoFormat('dddd, D MMMM Y') }}</a>
+									</li>
+								</ul>
+								<p>{!! Str::limit($ar->artikel, 100, '...') !!}</p>
 							</div>
 						</div>
 					</div>
+					@endforeach
+
 				</div>
 			</div>
 

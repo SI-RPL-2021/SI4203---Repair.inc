@@ -9,63 +9,59 @@ use App\Artikel;
 
 class HomeController extends Controller
 {
-	public function home()
-	{
+	public function home(){
 		$kategoris = Kategori::limit(4)->get();
 		$jasa = Jasa::limit(8)->get();
+		$artikel = Artikel::limit(8)->get();
 
-		return view('auth.home.home', compact('kategoris', 'jasa',));
+		return view('auth.home.home', compact('kategoris','jasa','artikel'));
 	}
 
-	public function kategori()
-	{
+	public function kategori(){
 		$kategoris = Kategori::limit(4)->get();
 		$kategori = Kategori::all();
-		return view('auth.home.kategori', compact('kategori', 'kategoris'));
+		return view('auth.home.kategori', compact('kategori','kategoris'));
 	}
 
-	public function kategori_detail($id)
-	{
+	public function kategori_detail($id){
 		$kategoris = Kategori::limit(4)->get();
 		$kategori = Kategori::where('id', $id)->get();
 		$jasa = Jasa::where('id_kategori', $id)->get();
 
-		return view('auth.home.kategori-detail', compact('kategori', 'jasa', 'kategoris'));
+		return view('auth.home.kategori-detail', compact('kategori','jasa','kategoris'));
 	}
 
-	public function jasa_detail($id)
-	{
+	public function jasa_detail($id){
 		$kategoris = Kategori::limit(4)->get();
 		$jasa = Jasa::where('id', $id)->get();
 
-		return view('auth.home.jasa-detail', compact('jasa', 'kategoris'));
+		return view('auth.home.jasa-detail', compact('jasa','kategoris'));
 	}
 
-	public function login()
-	{
+	public function login(){
 		$kategoris = Kategori::limit(4)->get();
 
 		return view('auth.home.login', compact('kategoris'));
 	}
 
-	public function register()
-	{
+	public function register(){
 		$kategoris = Kategori::limit(4)->get();
 
 		return view('auth.home.register', compact('kategoris'));
 	}
 
-	public function artikel()
-	{
+	public function artikel(){
 		$kategoris = Kategori::limit(4)->get();
+		$artikel = Artikel::all();
 
-		return view('auth.home.artikel', compact('artikel', 'kategoris'));
+		return view('auth.home.artikel', compact('artikel','kategoris'));
 	}
 
-	public function artikel_detail($id)
-	{
+	public function artikel_detail($id){
 		$kategoris = Kategori::limit(4)->get();
+		$artikel = Artikel::where('id', $id)->get();
+		$artikels = Artikel::limit(5)->get();
 
-		return view('auth.home.artikel-detail', compact('artikel', 'kategoris', 'artikels'));
+		return view('auth.home.artikel-detail', compact('artikel','kategoris','artikels'));
 	}
 }

@@ -37,7 +37,7 @@
  * 	  4.2 Error
  * 5. Utilities
  */
-/** 1. Variables  **/
+ /** 1. Variables  **/
 /**
  * VARIABLE - TABLE OF CONTENTS
  * 
@@ -69,7 +69,7 @@
  * 5. Utilities
  * 6. Responsive
  */
-.color-primary {
+ .color-primary {
   color: #5A8DEE;
 }
 
@@ -1500,4 +1500,116 @@ footer {
 
 .bg-gray-700 {
   background-color: #4a5568 !important;
+}
+
+.mb2 {
+  margin-bottom: 2rem !important;
+}
+
+.vertical-timeline {
+  width: 100%;
+  position: relative;
+  padding: 1.5rem 0 1rem
+}
+
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 67px;
+  height: 100%;
+  width: 4px;
+  background: #e9ecef;
+  border-radius: .25rem
+}
+
+.vertical-timeline-element {
+  position: relative;
+  margin: 0 0 1rem
+}
+
+.vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
+  visibility: visible;
+  animation: cd-bounce-1 .8s
+}
+
+.vertical-timeline-element-icon {
+  position: absolute;
+  top: 0;
+  left: 60px
+}
+
+.vertical-timeline-element-icon .badge-dot-xl {
+  box-shadow: 0 0 0 5px #fff
+}
+
+.badge-dot-xl {
+  width: 18px;
+  height: 18px;
+  position: relative
+}
+
+.badge:empty {
+  display: none
+}
+
+.badge.badge-dot {
+  background-color: #fff !important;
+}
+
+.badge-dot-xl::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: .25rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -5px 0 0 -5px;
+  background: #fff
+}
+
+.vertical-timeline-element-content {
+  position: relative;
+  margin-left: 90px;
+  font-size: .8rem;
+  padding-bottom: 1.5rem;
+}
+
+.vertical-timeline-element-content .timeline-title {
+  font-size: .8rem;
+  text-transform: uppercase;
+  margin: 0 0 .5rem;
+  padding: 2px 0 0;
+  font-weight: bold
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+  display: block;
+  position: absolute;
+  left: -90px;
+  top: 0;
+  padding-right: 10px;
+  text-align: right;
+  color: #adb5bd;
+  font-size: .7619rem;
+  white-space: nowrap
+}
+
+.vertical-timeline-element-content:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.badge-success {
+  box-shadow: 0 0 0 5px #28a745 !important;
+}
+
+.badge-warning {
+  box-shadow: 0 0 0 5px #ffc107 !important;
+}
+
+.badge-secondary {
+  box-shadow: 0 0 0 5px #868e96 !important;
 }

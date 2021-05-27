@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Order History | Repair-Inc
+Order History | Repair-Inch
 @endsection
 
 @section('content')
@@ -40,7 +40,28 @@ Order History | Repair-Inc
                                 <td class="pro-price">
                                     <span>Rp {{ number_format(App\Jasa::where('id', $ps->id_jasa)->value('harga')) }}</span>
                                 </td>
+                                <td>
+                                    @php
+                                    $status = App\Pembayaran::where('id_pesanan', $ps->id)->value('status');
+                                    @endphp
 
+                                    @if( $status == "Belum dibayar" )
+                                    <a href="{{ route('customer.pembayaran', $ps->id) }}" class="btn btn-danger text-white">
+                                        {{ App\Pembayaran::where('id_pesanan', $ps->id)->value('status') }}
+                                    </a>
+
+                                    @elseif($status == "Proses Verifikasi")
+                                    <a href="{{ route('customer.pembayaran', $ps->id) }}" class="btn btn-warning text-white">
+                                        {{ App\Pembayaran::where('id_pesanan', $ps->id)->value('status') }}
+                                    </a>
+
+                                    @elseif($status == "Terbayar")
+                                    <a href="{{ route('customer.pembayaran', $ps->id) }}" class="btn btn-success text-white">
+                                        {{ App\Pembayaran::where('id_pesanan', $ps->id)->value('status') }}
+                                    </a>
+
+                                    @endif
+                                </td>
                                 <td>
                                     @php
                                     $progres = $ps->status;
