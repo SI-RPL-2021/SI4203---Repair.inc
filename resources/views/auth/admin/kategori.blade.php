@@ -1,7 +1,7 @@
 @extends('app-dashboard')
 
 @section('title')
-Kategori | Repair-Inch
+Kategori | Repair.Inch
 @endsection
 
 @section('content')

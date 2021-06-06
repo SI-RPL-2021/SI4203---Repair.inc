@@ -1,7 +1,7 @@
 @extends('app-dashboard')
 
 @section('title')
-Pesanan | Repair-Inch
+Pesanan | Repair.Inch
 @endsection
 
 @section('content')
@@ -72,11 +72,7 @@ Pesanan | Repair-Inch
 										class="dropdown-item"
 										data-target="#modal-akhiri{{ $ps->id }}" 
 										href="#">Progress</a>
-										<a 
-										data-toggle="modal" 
-										class="dropdown-item"
-										data-target="#modal-garansi{{ $ps->id }}"
-										href="#">Garansi</a>
+										
 										<a 
 										data-toggle="modal" 
 										class="dropdown-item"

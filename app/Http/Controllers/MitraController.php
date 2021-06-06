@@ -8,6 +8,7 @@ use App\Mitra;
 use App\Jasa;
 use App\Kategori;
 use App\Pesanan;
+use App\Tracking;
 use Auth;
 
 class MitraController extends Controller
@@ -23,8 +24,7 @@ class MitraController extends Controller
 		return view('auth.mitra.jasa', compact('jasa','kategori'));
 	}
 
-	public function pesanan()
-	{
+	public function pesanan(){
 		$jasa = Jasa::where('id_mitra', Auth::guard('mitra')->user()->id)->get();
 
 		$jasas = [];
@@ -41,42 +41,44 @@ class MitraController extends Controller
 			$pesanans[] = [$key->id];	
 		};
 
-		return view('auth.mitra.pesanan');
+		$tracking = Tracking::whereIn('id_pesanan', $pesanans)->get();
+
+		return view('auth.mitra.pesanan', compact('pesanan','tracking'));
 	}
-	
-// ACTION
-public function store(Request $request){
-	$post = New Mitra();
-	$post->username = $request->username;
-	$post->password = Hash::make($request->password);
-	$post->nama = $request->nama;
-	$post->notelp = $request->notelp;
-	$post->rating = $request->rating;
-	$post->descPerform = $request->descPerform;
 
-	$post->save();
+    // ACTION
+	public function store(Request $request){
+		$post = New Mitra();
+		$post->username = $request->username;
+		$post->password = Hash::make($request->password);
+		$post->nama = $request->nama;
+		$post->notelp = $request->notelp;
+		$post->rating = $request->rating;
+		$post->descPerform = $request->descPerform;
 
-	return redirect()->back();
-}
+		$post->save();
 
-public function edit(Request $request, $id){
-	$post = Mitra::find($id);
-	$post->username = $request->username;
-	$post->password = Hash::make($request->password);
-	$post->nama = $request->nama;
-	$post->notelp = $request->notelp;
-	$post->rating = $request->rating;
-	$post->descPerform = $request->descPerform;
+		return redirect()->back();
+	}
 
-	$post->save();
+	public function edit(Request $request, $id){
+		$post = Mitra::find($id);
+		$post->username = $request->username;
+		$post->password = Hash::make($request->password);
+		$post->nama = $request->nama;
+		$post->notelp = $request->notelp;
+		$post->rating = $request->rating;
+		$post->descPerform = $request->descPerform;
 
-	return redirect()->back();
-}
+		$post->save();
 
-public function delete($id){
-	$post = Mitra::find($id);
-	$post->delete();
+		return redirect()->back();
+	}
 
-	return redirect()->back();
-}
+	public function delete($id){
+		$post = Mitra::find($id);
+		$post->delete();
+
+		return redirect()->back();
+	}
 }

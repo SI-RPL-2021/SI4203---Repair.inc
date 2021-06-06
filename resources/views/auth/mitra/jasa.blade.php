@@ -1,11 +1,11 @@
 @extends('app-dashboard')
 
 @section('title')
-Jasa | Repair-Inc
+Jasa | Repair.Inch
 @endsection
 
 @section('content')
-<div class="page-title">
+<div class="page-title mb2">
 	<h3>Jasa</h3>
 </div>
 
@@ -86,7 +86,7 @@ Jasa | Repair-Inc
 </div>
 
 <div class="modal fade" id="edit-{{ $cs->id }}" tabindex="-1" role="dialog">
-	<form action="{{ route('mitra.jasa.edit', $cs->id) }}" method="POST">
+	<form action="{{ route('mitra.jasa.edit', $cs->id) }}" method="POST" enctype="multipart/form-data">
 		@csrf
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -113,6 +113,13 @@ Jasa | Repair-Inc
 						<label for="harga">Harga</label>
 						<input type="number" class="form-control" id="harga" placeholder="Harga" name="harga" value="{{ $cs->harga }}">
 					</div>
+					<div class="form-file">
+						<input type="file" class="form-file-input" id="gambar" name="gambar">
+						<label class="form-file-label" for="gambar">
+							<span class="form-file-text">Pilih Gambar...</span>
+							<span class="form-file-button">Cari</span>
+						</label>
+					</div>
 					<div class="form-group mb-3">
 						<label for="deskripsi" class="form-label">Deskripsi</label>
 						<textarea class="form-control" id="deskripsi" rows="3" name="deskripsi">{{ $cs->deskripsi }}</textarea>
@@ -137,7 +144,7 @@ Jasa | Repair-Inc
 @endforeach
 
 <div class="modal fade" id="add-new" tabindex="-1" role="dialog">
-	<form action="{{ route('mitra.jasa.store') }}" method="POST">
+	<form action="{{ route('mitra.jasa.store') }}" method="POST" enctype="multipart/form-data">
 		@csrf
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -163,6 +170,13 @@ Jasa | Repair-Inc
 					<div class="form-group">
 						<label for="harga">Harga</label>
 						<input type="number" class="form-control" id="harga" placeholder="Harga" name="harga">
+					</div>
+					<div class="form-file">
+						<input type="file" class="form-file-input" id="gambar" name="gambar">
+						<label class="form-file-label" for="gambar">
+							<span class="form-file-text">Pilih Gambar...</span>
+							<span class="form-file-button">Cari</span>
+						</label>
 					</div>
 					<div class="form-group mb-3">
 						<label for="deskripsi" class="form-label">Deskripsi</label>

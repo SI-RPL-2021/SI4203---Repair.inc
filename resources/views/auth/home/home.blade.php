@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Repair-Inch
+Repair.Inch
 @endsection
 
 @section('content')
@@ -15,25 +15,25 @@ Repair-Inch
 							<div class="hero-content col">
 								<h2>Selamat Datang di</h2>
 								<h1><span>Repair.inc</span></h1>
-								<h1>a <span class="big">29%</span> OFF</h1>
+								<h1>IT’S <span class="big">29%</span> OFF</h1>
 								<a href="#">get it now</a>
 							</div>
 
 							<div class="hero-image col"><img src="assets/images/hero/hero-1.png" alt="Hero Image"></div>
-						</div>
+						</div>     
 					</div>
 
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
 								<h2>Repair.inc</h2>
-								<h1><span>asdasdasd</span></h1>
-								<h1>Iasdaasd <span class="big">35%</span> OFF</h1>
+								<h1><span>GL G6</span></h1>
+								<h1>IT’S <span class="big">35%</span> OFF</h1>
 								<a href="#">get it now</a>
 							</div>
 
 							<div class="hero-image col"><img src="assets/images/hero/hero-2.png" alt="Hero Image"></div>
-						</div>
+						</div>     
 					</div>
 
 					<div class="hero-item">
@@ -46,7 +46,7 @@ Repair-Inch
 							</div>
 
 							<div class="hero-image col"><img src="assets/images/hero/hero-3.png" alt="Hero Image"></div>
-						</div>
+						</div>     
 					</div>
 				</div>
 
@@ -131,9 +131,7 @@ Repair-Inch
 	<div class="container">
 		<div class="row">
 			<div class="col-12 mb-40">
-				<div class="section-title-one" data-title="Jasa Terbaru">
-					<h1>Jasa Terbaru</h1>
-				</div>
+				<div class="section-title-one" data-title="Jasa Terbaru"><h1>Jasa Terbaru</h1></div>
 			</div>
 
 			<div class="col-12">
@@ -144,7 +142,7 @@ Repair-Inch
 						<div class="ee-product">
 							<div class="image">
 								<a href="{{ route('jasa.detail', $js->id) }}" class="img">
-									<img src="assets/images/product/product-5.png" alt="Product Image">
+									<img src="{{ $js->gambar }}" alt="Product Image">
 								</a>
 							</div>
 
@@ -175,32 +173,40 @@ Repair-Inch
 </div>
 
 <div class="product-section section mb-60">
-	<div class="container">
+	<div class="container mb10">
 		<div class="row">
 
 			<!-- Section Title Start -->
 			<div class="col-12 mb-40">
-				<div class="section-title-one" data-title="Artikel Terbaru">
-					<h1>Artikel Terbaru</h1>
-				</div>
+				<div class="section-title-one" data-title="Artikel Terbaru"><h1>Artikel Terbaru</h1></div>
 			</div><!-- Section Title End -->
 
 			<div class="col-12">
 				<div class="row">
+
+					@foreach($artikel as $ar)
 					<div class="col-xl-4 col-lg-4 col-md-6 col-12 pb-30 pt-10">
-						<div class="ee-product">
-							<div class="image">
-								<a href="single-product.html" class="img">
-									<img src="assets/images/product/product-16.png" alt="Product Image">
-								</a>
-							</div>
+						<div class="ee-blog">
+							<a href="{{ route('artikel.detail', $ar->id) }}" class="image">
+								<img src="{{ $ar->gambar }}" alt="Blog Image">
+							</a>
 							<div class="content">
-								<div class="category-title">
-									<h5 class="title"><a href="single-product.html">Nexo Andriod TV Box</a></h5>
-								</div>
+								<h3>
+									<a href="single-blog-left-sidebar.html">
+										{{ $ar->judul }}
+									</a>
+								</h3>
+								<ul class="meta">
+									<li>
+										<a href="{{ route('artikel.detail', $ar->id) }}">{{ \Carbon\Carbon::parse($ar->created_at)->isoFormat('dddd, D MMMM Y') }}</a>
+									</li>
+								</ul>
+								<p>{!! Str::limit($ar->artikel, 100, '...') !!}</p>
 							</div>
 						</div>
 					</div>
+					@endforeach
+
 				</div>
 			</div>
 

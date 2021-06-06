@@ -1,11 +1,11 @@
 @extends('app-dashboard')
 
 @section('title')
-Mitra | Repair-Inch
+Mitra | Repair.Inch
 @endsection
 
 @section('content')
-<div class="page-title">
+<div class="page-title mb2">
 	<h3>Mitra</h3>
 </div>
 
@@ -34,7 +34,7 @@ Mitra | Repair-Inch
 						<td>{{ $cs->username }}</td>
 						<td>{{ $cs->ratting }}</td>
 						<td>{{ $cs->notelp }}</td>
-						<td>
+						<td class="text-right">
 							<button 
 							type="button" 
 							class="btn icon btn-warning"
