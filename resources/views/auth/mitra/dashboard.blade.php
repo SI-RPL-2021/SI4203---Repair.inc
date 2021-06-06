@@ -2,9 +2,13 @@
 
 @section('title')
 <<<<<<< HEAD
+<<<<<<< HEAD
 Mitra | Repair.Inch
 =======
 Mitra | Repair-Inch
+>>>>>>> yusuf_1202184304
+=======
+Mitra | Repair-Inc
 >>>>>>> yusuf_1202184304
 @endsection
 

@@ -2,7 +2,11 @@
 
 @section('title')
 @foreach($jasa as $js)
+<<<<<<< HEAD
 {{ $js->nama }} | Repair.Inch
+=======
+{{ $js->nama }} | Repair-Inc
+>>>>>>> yusuf_1202184304
 @endforeach
 @endsection
 
