@@ -83,7 +83,7 @@ Mitra | Repair.Inch
 		<div class="col-md-7">
 			<div class="card">
 				<div class="card-header">
-					<h3 class='card-heading p-1 pl-3'>Pesanan Terbaru</h3>
+					<h3 class='card-heading p-1 pl-3'>Riwayat Pesanan</h3>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
@@ -91,9 +91,9 @@ Mitra | Repair.Inch
 							<thead>
 								<tr>
 									<th>Customer</th>
-									<th>Jasa</th>
-									<th>Status</th>
+									<th>Total Pembayaran</th>
 									<th>Tanggal</th>
+									<th>Status</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -103,9 +103,18 @@ Mitra | Repair.Inch
 								@foreach($pesanan as $ps)
 								<tr>
 									<td>{{ App\Customer::where('id', $ps->id_customer)->value('username') }}</td>
-									<td>{{ App\Jasa::where('id', $ps->id_jasa)->value('nama') }}</td>
-									<td>{{ $ps->status }}</td>
+									<td>@php
+							$pembayaran = App\Pembayaran::where('status', 'Terbayar')->get('id_pesanan');
+							$pesanan = App\Pesanan::whereIn('id', $pembayaran)->get();
+							$jumlah = 0;
+
+							foreach($pesanan as $dt) {
+								$jumlahs = App\Jasa::where('id', $dt->id_jasa)->value('harga');
+								$jumlah += $jumlahs;
+							}
+							@endphp Rp {{ number_format($jumlah) }}</td>
 									<td>{{ date('d-m-Y', strtotime($ps->created_at)) }}</td>
+									<td>{{ $ps->status }}</td>
 								</tr>
 								@endforeach
 							</tbody>
