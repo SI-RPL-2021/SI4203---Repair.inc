@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Order History | Repair-Inch
+Order History | Repair-Inc
 @endsection
 
 @section('content')

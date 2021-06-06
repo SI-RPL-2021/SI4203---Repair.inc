@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Register | Repair-Inch
+Register | Repair-Inc
 @endsection
 
 @section('content')

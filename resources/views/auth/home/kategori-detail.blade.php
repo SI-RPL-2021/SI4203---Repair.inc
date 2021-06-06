@@ -2,7 +2,7 @@
 
 @section('title')
 @foreach($kategori as $kt)
-{{ $kt->nama }} | Repair-Inch
+{{ $kt->nama }} | Repair-Inc
 @endforeach
 @endsection
 

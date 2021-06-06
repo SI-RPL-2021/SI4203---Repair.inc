@@ -2,7 +2,7 @@
 
 @section('title')
 @foreach($jasa as $js)
-{{ $js->nama }} | Repair-Inch
+{{ $js->nama }} | Repair-Inc
 @endforeach
 @endsection
 
