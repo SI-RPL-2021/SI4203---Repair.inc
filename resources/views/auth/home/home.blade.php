@@ -80,18 +80,18 @@ Repair-Inc
 		<div class="about-content col-lg-6">
 			<div class="row">
 				<div class="col-12 mb-50">
-					<h1>WELCOME TO <span>Repair.inc</span></h1>
-					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
+					<h1>tentang <span>Repair.inc</span></h1>
+					<p>Repair.inc merupakan website penyedia jasa layanan reparasi rumahan yang dapat membantu kamu untuk menemukan jasa reparasi yang kamu butuhkan sesuai keinginan kamu.</p>
 				</div>
 
 				<div class="col-12 mb-50">
-					<h4>WE START AT 2015</h4>
-					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
+					<h4>SEMUA ADA DISINI</h4>
+					<p>Kita memastikan kenyamanan pengguna dalam mencari jasa layanan dengan cara memfilter mitra jasa yang bercompeten dalam menangani masalah.</p>
 				</div>
 
 				<div class="col-12 mb-50">
-					<h4>WIN BEST ONLINE SHOP AT 2017</h4>
-					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
+					<h4>SOLUSI ANTI RIBET</h4>
+					<p>Kamu tidak perlu khawatir dengan permasalahan rumah tangga kamu, hanya dengan mencari apa yang kamu butuhkan, mitra jasa kita bakal datang langsung ke rumah kamu.</p>
 				</div>
 
 			</div>
