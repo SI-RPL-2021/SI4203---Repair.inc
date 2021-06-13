@@ -43,7 +43,7 @@ Mitra | Repair.Inch
 				<div class="card-body p-0">
 					<div class="d-flex flex-column">
 						<div class='px-3 py-3 d-flex justify-content-between'>
-							<h3 class='card-title'>Jasa Tersedia</h3>
+							<h3 class='card-title'>Jasa Mitra</h3>
 							<div class="card-right align-items-center">
 								<p>{{ App\Jasa::all()->count() }}</p>
 							</div>
@@ -91,7 +91,7 @@ Mitra | Repair.Inch
 							<thead>
 								<tr>
 									<th>Customer</th>
-									<th>Total Pembayaran</th>
+									<th>Total Pembayaran Jasa</th>
 									<th>Tanggal</th>
 									<th>Status</th>
 								</tr>
@@ -102,18 +102,13 @@ Mitra | Repair.Inch
 								@endphp
 								@foreach($pesanan as $ps)
 								<tr>
+									<!-- //customer -->
 									<td>{{ App\Customer::where('id', $ps->id_customer)->value('username') }}</td>
-									<td>@php
-							$pembayaran = App\Pembayaran::where('status', 'Terbayar')->get('id_pesanan');
-							$pesanan = App\Pesanan::whereIn('id', $pembayaran)->get();
-							$jumlah = 0;
-
-							foreach($pesanan as $dt) {
-								$jumlahs = App\Jasa::where('id', $dt->id_jasa)->value('harga');
-								$jumlah += $jumlahs;
-							}
-							@endphp Rp {{ number_format($jumlah) }}</td>
+									<!-- Pembayaran -->
+									<td>{{ App\Jasa::where('id', $ps->id_jasa)->value('harga') }}</td>
+									<!-- Tanggal -->
 									<td>{{ date('d-m-Y', strtotime($ps->created_at)) }}</td>
+									<!-- Status -->
 									<td>{{ $ps->status }}</td>
 								</tr>
 								@endforeach
