@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-Repair-Inc
+Repair.Inch
 @endsection
 
 @section('content')
@@ -13,15 +13,43 @@ Repair-Inc
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
-								<h2>HURRY UP!</h2>
-								<h1><span>REPAIR.INC</span></h1>
+								<h2>Selamat Datang di</h2>
+								<h1><span>Repair.inc</span></h1>
 								<h1>IT’S <span class="big">29%</span> OFF</h1>
 								<a href="#">get it now</a>
 							</div>
-							<div class="hero-image col"><img src="https://i.ibb.co/HgpzYQw/Untitled-2.png" alt="Hero Image"></div>
+
+							<div class="hero-image col"><img src="assets/images/hero/hero-1.png" alt="Hero Image"></div>
+						</div>
+					</div>
+
+					<div class="hero-item">
+						<div class="row align-items-center justify-content-between">
+							<div class="hero-content col">
+								<h2>Repair.inc</h2>
+								<h1><span>GL G6</span></h1>
+								<h1>IT’S <span class="big">35%</span> OFF</h1>
+								<a href="#">get it now</a>
+							</div>
+
+							<div class="hero-image col"><img src="assets/images/hero/hero-2.png" alt="Hero Image"></div>
+						</div>
+					</div>
+
+					<div class="hero-item">
+						<div class="row align-items-center justify-content-between">
+							<div class="hero-content col">
+								<h2>HURRY UP!</h2>
+								<h1><span>MSVII Case</span></h1>
+								<h1>IT’S <span class="big">15%</span> OFF</h1>
+								<a href="#">get it now</a>
+							</div>
+
+							<div class="hero-image col"><img src="assets/images/hero/hero-3.png" alt="Hero Image"></div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -73,25 +101,25 @@ Repair-Inc
 
 		<!-- About Image -->
 		<div class="about-image col-lg-6 mb-50">
-			<img src="https://s3-ap-southeast-1.amazonaws.com/apic-asset/services-banner/image_589317e146275.png" alt="no img" width="585" height="483">
+			<img src="assets/images/about/about-1.png" alt="">
 		</div>
 
 		<!-- About Content -->
 		<div class="about-content col-lg-6">
 			<div class="row">
 				<div class="col-12 mb-50">
-					<h1>tentang <span>Repair.inc</span></h1>
-					<p>Repair.inc merupakan website penyedia jasa layanan reparasi rumahan yang dapat membantu kamu untuk menemukan jasa reparasi yang kamu butuhkan sesuai keinginan kamu.</p>
+					<h1>WELCOME TO <span>E&amp;E.</span></h1>
+					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
 				</div>
 
 				<div class="col-12 mb-50">
-					<h4>SEMUA ADA DISINI</h4>
-					<p>Kita memastikan kenyamanan pengguna dalam mencari jasa layanan dengan cara memfilter mitra jasa yang bercompeten dalam menangani masalah.</p>
+					<h4>WE START AT 2015</h4>
+					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
 				</div>
 
 				<div class="col-12 mb-50">
-					<h4>SOLUSI ANTI RIBET</h4>
-					<p>Kamu tidak perlu khawatir dengan permasalahan rumah tangga kamu, hanya dengan mencari apa yang kamu butuhkan, mitra jasa kita bakal datang langsung ke rumah kamu.</p>
+					<h4>WIN BEST ONLINE SHOP AT 2017</h4>
+					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
 				</div>
 
 			</div>

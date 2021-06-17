@@ -24,7 +24,7 @@
 
 						@if (Auth::guard('customer'))
 						@auth('customer')
-						<a href="/">
+						<a href="{{route('customer.profile', Auth::guard('customer')->user()->id)}}">
 							<i class="icofont icofont-user-alt-7"></i>
 							<span>{{ Auth::guard('customer')->user()->username }}</span>
 						</a>
