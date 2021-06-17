@@ -2,11 +2,9 @@
 
 @section('title')
 @foreach($kategori as $kt)
-<<<<<<< HEAD
-{{ $kt->nama }} | Repair.Inch
-=======
+
 {{ $kt->nama }} | Repair-Inc
->>>>>>> yusuf_1202184304
+
 @endforeach
 @endsection
 

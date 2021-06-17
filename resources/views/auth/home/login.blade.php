@@ -1,11 +1,8 @@
 @extends('app')
 
 @section('title')
-<<<<<<< HEAD
-Login | Repair.Inch
-=======
+
 Login | Repair-Inc
->>>>>>> yusuf_1202184304
 @endsection
 
 @section('content')

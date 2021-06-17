@@ -85,10 +85,7 @@ Route::prefix('customer')->middleware('auth:customer')->group(function () {
 	Route::get('/', 'CustomerController@dashboard')->name('customer.dashboard');
 	Route::get('/order', 'CustomerController@order')->name('customer.order');
 	Route::get('/pembayaran/{id}', 'CustomerController@pembayaran')->name('customer.pembayaran');
-<<<<<<< HEAD
-=======
 	Route::get('/chat', 'CustomerController@chat')->name('customer.chat');
->>>>>>> yusuf_1202184304
 	Route::get('/proses/{id}', 'CustomerController@proses')->name('customer.proses');
 
 	

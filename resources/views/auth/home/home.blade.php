@@ -48,21 +48,10 @@ Repair-Inc
 					<div class="hero-item">
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
-=======
->>>>>>> yusuf_1202184304
-								<h2>HURRY UP!</h2>
-								<h1><span>REPAIR.INC</span></h1>
-								<h1>IT’S <span class="big">29%</span> OFF</h1>
-								<a href="#">get it now</a>
-							</div>
-<<<<<<< HEAD
 
-							<div class="hero-image col"><img src="assets/images/hero/hero-3.png" alt="Hero Image"></div>
-						</div>     
-=======
 							<div class="hero-image col"><img src="https://i.ibb.co/HgpzYQw/Untitled-2.png" alt="Hero Image"></div>
 						</div>
->>>>>>> yusuf_1202184304
+
 					</div>
 				</div>
 			</div>

@@ -64,13 +64,6 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('admin.jasa') }}" class='sidebar-link'>
-<<<<<<< HEAD
-						<i data-feather="home" width="20"></i> 
-						<span>Jasa</span>
-					</a>
-				</li>
-				
-=======
 						<i data-feather="home" width="20"></i>
 						<span>Jasa</span>
 					</a>
@@ -99,7 +92,6 @@
 						<span>Pesan</span>
 					</a>
 				</li>
->>>>>>> yusuf_1202184304
 			</ul>
 		</div>
 		<button class="sidebar-toggler btn x"><i data-feather="x"></i></button>

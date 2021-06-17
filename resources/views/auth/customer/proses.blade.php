@@ -110,15 +110,11 @@
 
                 <div class="row">
                     <div class="col-12">
-<<<<<<< HEAD
-                      
-=======
                         <button 
                         type="button" 
                         class="btn btn-primary" 
                         data-toggle="modal" 
                         data-target="#modal-garansi">Klaim Garansi</button>
->>>>>>> yusuf_1202184304
 
                         <button 
                         type="button" 

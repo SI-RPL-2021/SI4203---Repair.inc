@@ -1,15 +1,9 @@
 @extends('app-dashboard')
 
 @section('title')
-<<<<<<< HEAD
-<<<<<<< HEAD
-Pesanan | Repair.Inch
-=======
-Pesanan | Repair-Inch
->>>>>>> yusuf_1202184304
-=======
+
 Pesanan | Repair-Inc
->>>>>>> yusuf_1202184304
+
 @endsection
 
 @section('content')
@@ -80,15 +74,11 @@ Pesanan | Repair-Inc
 										class="dropdown-item"
 										data-target="#modal-akhiri{{ $ps->id }}" 
 										href="#">Progress</a>
-<<<<<<< HEAD
-										
-=======
 										<a 
 										data-toggle="modal" 
 										class="dropdown-item"
 										data-target="#modal-garansi{{ $ps->id }}"
 										href="#">Garansi</a>
->>>>>>> yusuf_1202184304
 										<a 
 										data-toggle="modal" 
 										class="dropdown-item"

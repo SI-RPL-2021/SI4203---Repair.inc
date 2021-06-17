@@ -7,11 +7,7 @@
 					@auth('customer')
 					<div class="header-links">
 						<a href="{{ route('customer.order') }}">
-<<<<<<< HEAD
-							<img src="{{asset('assets/images/icons/histo.png')}}" alt="Car Icon"> 
-=======
 							<img src="{{asset('assets/images/icons/histo.png')}}" alt="Car Icon">
->>>>>>> yusuf_1202184304
 							<span>History Order</span>
 						</a>
 					</div>
@@ -28,13 +24,8 @@
 
 						@if (Auth::guard('customer'))
 						@auth('customer')
-<<<<<<< HEAD
-						<a href="/">
-							<i class="icofont icofont-user-alt-7"></i> 
-=======
 						<a href="{{route('customer.profile', Auth::guard('customer')->user()->id)}}">
 							<i class="icofont icofont-user-alt-7"></i>
->>>>>>> yusuf_1202184304
 							<span>{{ Auth::guard('customer')->user()->username }}</span>
 						</a>
 						<a href="/logout">
