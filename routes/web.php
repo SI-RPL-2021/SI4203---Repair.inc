@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/kategori', 'HomeController@kategori')->name('kategori');
 Route::get('/artikel', 'HomeController@artikel')->name('artikel');
@@ -79,6 +80,8 @@ Route::prefix('mitra')->middleware('auth:mitra')->group(function () {
 
 // CUSTOMER
 Route::prefix('customer')->middleware('auth:customer')->group(function () {
+	Route::get('/profile/{id}', 'CustomerController@profile')->name('customer.profile');
+
 	Route::get('/', 'CustomerController@dashboard')->name('customer.dashboard');
 	Route::get('/order', 'CustomerController@order')->name('customer.order');
 	Route::get('/pembayaran/{id}', 'CustomerController@pembayaran')->name('customer.pembayaran');

@@ -28,8 +28,13 @@
 
 						@if (Auth::guard('customer'))
 						@auth('customer')
+<<<<<<< HEAD
 						<a href="/">
 							<i class="icofont icofont-user-alt-7"></i> 
+=======
+						<a href="{{route('customer.profile', Auth::guard('customer')->user()->id)}}">
+							<i class="icofont icofont-user-alt-7"></i>
+>>>>>>> yusuf_1202184304
 							<span>{{ Auth::guard('customer')->user()->username }}</span>
 						</a>
 						<a href="/logout">
