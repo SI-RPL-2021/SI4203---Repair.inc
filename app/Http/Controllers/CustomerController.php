@@ -91,4 +91,30 @@ class CustomerController extends Controller
 
 		return view('auth.customer.profile', compact('kategoris', 'data'));
 	}
+
+
+	public function profileEdit($id)
+	{
+		$kategoris = Kategori::limit(4)->get();
+		$data = Customer::find($id);
+
+		return view('auth.customer.profile-edit', compact('kategoris', 'data'));
+	}
+
+	public function profileData($id, Request $request)
+	{
+		$post = Customer::find($id);
+
+		$post->username = $request->username;
+		if (is_null($request->password) == false) {
+			$post->password = Hash::make($request->password);
+		}
+		$post->email = $request->email;
+		$post->notelp = $request->notelp;
+		$post->alamat = $request->alamat;
+
+		$post->save();
+
+		return redirect()->route('home');
+	}
 }

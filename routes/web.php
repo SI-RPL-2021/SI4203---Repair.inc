@@ -81,6 +81,8 @@ Route::prefix('mitra')->middleware('auth:mitra')->group(function () {
 // CUSTOMER
 Route::prefix('customer')->middleware('auth:customer')->group(function () {
 	Route::get('/profile/{id}', 'CustomerController@profile')->name('customer.profile');
+	Route::get('/profile/{id}/edit', 'CustomerController@profileEdit')->name('customer.profile.edit');
+	Route::put('/profile/{id}/edit', 'CustomerController@profileData')->name('profileData');
 
 	Route::get('/', 'CustomerController@dashboard')->name('customer.dashboard');
 	Route::get('/order', 'CustomerController@order')->name('customer.order');
@@ -88,7 +90,7 @@ Route::prefix('customer')->middleware('auth:customer')->group(function () {
 	Route::get('/chat', 'CustomerController@chat')->name('customer.chat');
 	Route::get('/proses/{id}', 'CustomerController@proses')->name('customer.proses');
 
-	
+
 	Route::post('/feedback/post', 'FeedbackController@store')->name('customer.feedback.store');
 	Route::post('/feedback/edit/{id}', 'FeedbackController@edit')->name('customer.feedback.edit');
 	Route::post('/feedback/delete/{id}', 'FeedbackController@delete')->name('customer.feedback.delete');

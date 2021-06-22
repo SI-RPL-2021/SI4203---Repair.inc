@@ -29,7 +29,7 @@
                     <textarea type="text" class="form-control" name="username" disabled>{{$data->alamat}}</textarea>
                 </div>
                 <div class="text-center">
-                    <a type="submit" href="#" class="btn btn-warning text-light">Edit Profile</a>
+                    <a type="submit" href="{{route('customer.profile.edit', $data->id)}}" class="btn btn-warning text-light">Edit Profile</a>
                 </div>
             </div>
         </div>
