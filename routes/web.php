@@ -13,7 +13,7 @@ Route::get('/login', 'HomeController@login')->name('login')->middleware('guest')
 Route::post('/login', 'LoginController@postLogin');
 Route::post('/register/post', 'LoginController@register_store')->name('register.store');
 Route::get('/logout', 'LoginController@logout');
-
+Route::get('/faq', 'HomeController@faq')->name('faq');
 
 // ADMIN
 Route::prefix('admin')->middleware('auth:admin')->group(function () {
@@ -90,6 +90,9 @@ Route::prefix('customer')->middleware('auth:customer')->group(function () {
 	Route::get('/chat', 'CustomerController@chat')->name('customer.chat');
 	Route::get('/proses/{id}', 'CustomerController@proses')->name('customer.proses');
 
+	Route::post('/garansi/post', 'GaransiController@store')->name('customer.garansi.store');
+	Route::post('/garansi/edit/{id}', 'GaransiController@edit')->name('customer.garansi.edit');
+	Route::post('/garansi/delete/{id}', 'GaransiController@delete')->name('customer.garansi.delete');
 
 	Route::post('/feedback/post', 'FeedbackController@store')->name('customer.feedback.store');
 	Route::post('/feedback/edit/{id}', 'FeedbackController@edit')->name('customer.feedback.edit');

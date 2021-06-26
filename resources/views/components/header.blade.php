@@ -71,6 +71,7 @@
 									</ul>
 								</li>
 								<li class="active"><a href="{{ route('artikel') }}">Artikel</a></li>
+								<li class="active"><a href="{{ route('faq') }}">FAQ</a></li>
 								@if (Auth::guard('customer'))
 								@auth('customer')
 								<li><a href="{{ route('customer.chat') }}">Customer Service</a></li>

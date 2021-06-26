@@ -33,8 +33,9 @@ Register | Repair-Inc
 							<div class="col-12 mb-20">
 								<input type="password" placeholder="Password" name="password">
 							</div>
+
 							<div class="col-12 mb-20">
-								<textarea name="alamat" placeholder="Alamat"></textarea>
+								<input type="text" placeholder="Alamat" name="alamat">
 							</div>
 							<div class="col-12 text-right">
 								<input type="submit" value="Register"></input>

@@ -1,9 +1,7 @@
 @extends('app-dashboard')
 
 @section('title')
-
 Pesanan | Repair-Inc
-
 @endsection
 
 @section('content')
@@ -41,23 +39,15 @@ Pesanan | Repair-Inc
 							@endphp
 
 							@if( $status == "Belum dibayar" && $ps->status == "Belum diproses")
-							<a 
-							href="#!" 
-							class="btn btn-danger round">{{ App\Pembayaran::where('id_pesanan', $ps->id)->value('status') }}</a>
+							<a href="#!" class="btn btn-danger round">{{ App\Pembayaran::where('id_pesanan', $ps->id)->value('status') }}</a>
 
 							@elseif($status == "Proses dibayar" && $ps->status == "Belum disetujui")
 
 							@elseif($status == "Proses Verifikasi")
-							<button 
-							data-toggle="modal" 
-							data-target="#modal-verifikasi{{ $ps->id }}"
-							class="btn btn-warning round">{{ App\Pembayaran::where('id_pesanan', $ps->id)->value('status') }}</button>
+							<button data-toggle="modal" data-target="#modal-verifikasi{{ $ps->id }}" class="btn btn-warning round">{{ App\Pembayaran::where('id_pesanan', $ps->id)->value('status') }}</button>
 
 							@elseif($status == "Terbayar")
-							<button 
-							data-toggle="modal" 
-							data-target="#modal-pembayaran{{ $ps->id }}"
-							class="btn btn-success round">{{ App\Pembayaran::where('id_pesanan', $ps->id)->value('status') }}</button>
+							<button data-toggle="modal" data-target="#modal-pembayaran{{ $ps->id }}" class="btn btn-success round">{{ App\Pembayaran::where('id_pesanan', $ps->id)->value('status') }}</button>
 
 							@endif
 						</td>
@@ -69,21 +59,9 @@ Pesanan | Repair-Inc
 										Detail
 									</button>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
-										<a
-										data-toggle="modal" 
-										class="dropdown-item"
-										data-target="#modal-akhiri{{ $ps->id }}" 
-										href="#">Progress</a>
-										<a 
-										data-toggle="modal" 
-										class="dropdown-item"
-										data-target="#modal-garansi{{ $ps->id }}"
-										href="#">Garansi</a>
-										<a 
-										data-toggle="modal" 
-										class="dropdown-item"
-										data-target="#modal-feedback{{ $ps->id }}"
-										href="#">Feedback</a>
+										<a data-toggle="modal" class="dropdown-item" data-target="#modal-akhiri{{ $ps->id }}" href="#">Progress</a>
+										<a data-toggle="modal" class="dropdown-item" data-target="#modal-garansi{{ $ps->id }}" href="#">Garansi</a>
+										<a data-toggle="modal" class="dropdown-item" data-target="#modal-feedback{{ $ps->id }}" href="#">Feedback</a>
 									</div>
 								</div>
 							</div>
@@ -291,9 +269,9 @@ $statuss = App\Pembayaran::where('id_pesanan', $ps->id)->value('status');
 							@if($tr->id_pesanan == $ps->id)
 							@if($tr->status == "Order")
 							<div class="vertical-timeline-item vertical-timeline-element">
-								<div> 
-									<span class="vertical-timeline-element-icon bounce-in"> 
-										<i class="badge badge-dot badge-dot-xl badge-success"> </i> 
+								<div>
+									<span class="vertical-timeline-element-icon bounce-in">
+										<i class="badge badge-dot badge-dot-xl badge-success"> </i>
 									</span>
 									<div class="vertical-timeline-element-content bounce-in">
 										<h4 class="timeline-title">Order</h4>
@@ -310,9 +288,9 @@ $statuss = App\Pembayaran::where('id_pesanan', $ps->id)->value('status');
 							@if($tr->id_pesanan == $ps->id)
 							@if($tr->status == "Pembayaran")
 							<div class="vertical-timeline-item vertical-timeline-element">
-								<div> 
-									<span class="vertical-timeline-element-icon bounce-in"> 
-										<i class="badge badge-dot badge-dot-xl badge-success"> </i> 
+								<div>
+									<span class="vertical-timeline-element-icon bounce-in">
+										<i class="badge badge-dot badge-dot-xl badge-success"> </i>
 									</span>
 									<div class="vertical-timeline-element-content bounce-in">
 										<h4 class="timeline-title">Pembayaran</h4>
@@ -329,13 +307,13 @@ $statuss = App\Pembayaran::where('id_pesanan', $ps->id)->value('status');
 							@if($tr->id_pesanan == $ps->id)
 							@if($tr->status == "Proses")
 							<div class="vertical-timeline-item vertical-timeline-element">
-								<div> 
-									<span class="vertical-timeline-element-icon bounce-in"> 
+								<div>
+									<span class="vertical-timeline-element-icon bounce-in">
 										@if($selesai_tes == 0)
 										<i class="badge badge-dot badge-dot-xl badge-warning"> </i>
 										@else
 										<i class="badge badge-dot badge-dot-xl badge-success"> </i>
-										@endif 
+										@endif
 									</span>
 									<div class="vertical-timeline-element-content bounce-in">
 										<h4 class="timeline-title">Proses</h4>
@@ -352,9 +330,9 @@ $statuss = App\Pembayaran::where('id_pesanan', $ps->id)->value('status');
 
 							@if($selesai_tes == 0)
 							<div class="vertical-timeline-item vertical-timeline-element">
-								<div> 
-									<span class="vertical-timeline-element-icon bounce-in"> 
-										<i class="badge badge-dot badge-dot-xl badge-secondary"> </i> 
+								<div>
+									<span class="vertical-timeline-element-icon bounce-in">
+										<i class="badge badge-dot badge-dot-xl badge-secondary"> </i>
 									</span>
 									<div class="vertical-timeline-element-content bounce-in">
 										<h4 class="timeline-title">Selesai</h4>
@@ -368,9 +346,9 @@ $statuss = App\Pembayaran::where('id_pesanan', $ps->id)->value('status');
 							@if($tr->id_pesanan == $ps->id)
 							@if($tr->status == "Selesai")
 							<div class="vertical-timeline-item vertical-timeline-element">
-								<div> 
-									<span class="vertical-timeline-element-icon bounce-in"> 
-										<i class="badge badge-dot badge-dot-xl badge-success"> </i> 
+								<div>
+									<span class="vertical-timeline-element-icon bounce-in">
+										<i class="badge badge-dot badge-dot-xl badge-success"> </i>
 									</span>
 									<div class="vertical-timeline-element-content bounce-in">
 										<h4 class="timeline-title">Selesai</h4>
@@ -423,7 +401,7 @@ $statuss = App\Pembayaran::where('id_pesanan', $ps->id)->value('status');
 			<div class="modal-footer">
 				<div class="row">
 					<div class="col-md-6">
-						
+
 					</div>
 					<div class="col-md-6 text-right">
 						<button type="button" class="btn btn-light-secondary" data-dismiss="modal">
@@ -452,7 +430,7 @@ $statuss = App\Pembayaran::where('id_pesanan', $ps->id)->value('status');
 			<div class="modal-footer">
 				<div class="row">
 					<div class="col-md-6">
-						
+
 					</div>
 					<div class="col-md-6 text-right">
 						<button type="button" class="btn btn-light-secondary" data-dismiss="modal">
