@@ -19,6 +19,13 @@ Route::get('/faq', 'HomeController@faq')->name('faq');
 Route::prefix('admin')->middleware('auth:admin')->group(function () {
 	Route::get('/', 'AdminController@dashboard')->name('admin.dashboard');
 
+	Route::prefix('faq')->group(function () {
+		Route::get('/', 'AdminController@faq')->name('admin.faq');
+		Route::post('/store', 'faqController@store')->name('admin.faq.store');
+		Route::post('/edit/{id}', 'faqController@edit')->name('admin.faq.edit');
+		Route::post('/delete/{id}', 'faqController@delete')->name('admin.faq.delete');
+	});
+
 	Route::prefix('customer')->group(function () {
 		Route::get('/', 'AdminController@customer')->name('admin.customer');
 		Route::post('/edit/{id}', 'CustomerController@edit')->name('admin.customer.edit');
