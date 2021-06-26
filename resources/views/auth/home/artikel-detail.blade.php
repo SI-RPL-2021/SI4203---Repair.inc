@@ -2,9 +2,7 @@
 
 @section('title')
 @foreach($artikel as $ar)
-
-{{ $ar->judul }} | Repair-Inc
-
+{{ $ar->judul }} | Repair.Inc
 @endforeach
 @endsection
 

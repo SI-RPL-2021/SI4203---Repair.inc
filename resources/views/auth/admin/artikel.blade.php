@@ -1,9 +1,7 @@
 @extends('app-dashboard')
 
 @section('title')
-
-Artikel | Repair-Inc
-
+Artikel | Repair.Inc
 @endsection
 
 @section('content')
@@ -141,7 +139,7 @@ Artikel | Repair-Inc
 				</div>
 				<div class="modal-body">
 					<div class="form-file mb-3">
-						<input type="file" class="form-file-input" id="customFile" name="gambar">
+						<input type="file" class="form-file-input" id="customFile" name="gambar" required>
 						<label class="form-file-label" for="customFile">
 							<span class="form-file-text">Pilih Gambar ...</span>
 							<span class="form-file-button">Cari</span>
@@ -149,10 +147,10 @@ Artikel | Repair-Inc
 					</div>
 					<div class="form-group mb-3">
 						<label for="judul">Judul</label>
-						<input type="text" class="form-control" id="judul" placeholder="Judul" name="judul">
+						<input type="text" class="form-control" id="judul" placeholder="Judul" name="judul" required>
 					</div>
 					<div class="form-group mb-3">
-						<textarea class="tiny" name="artikel"></textarea>
+						<textarea class="tiny" name="artikel" ></textarea>
 					</div>
 				</div>
 				<div class="modal-footer">

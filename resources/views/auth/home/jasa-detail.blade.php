@@ -2,9 +2,7 @@
 
 @section('title')
 @foreach($jasa as $js)
-
-{{ $js->nama }} | Repair-Inc
-
+{{ $js->nama }} | Repair.Inc
 @endforeach
 @endsection
 
@@ -64,7 +62,7 @@
 
 							<div class="actions">
 								<input type="hidden" name="id_jasa" value="{{ $js->id }}">
-								<button type="submit" class="btn-submit">Order</button>
+								<button type="submit" class="btn btn-outline-warning">Order</button>
 							</div>
 						</div>
 					</div>

@@ -1,5 +1,9 @@
 @extends('app')
-@section('title','FAQ | Repair-Inc')
+
+@section('title')
+FAQ | Repair.Inc
+@endsection
+
 @section('content')
 <div class="product-section section mb-60 mt-60">
     <div class="container mb10">

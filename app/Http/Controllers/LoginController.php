@@ -56,7 +56,7 @@ class LoginController extends Controller
 
 		$post->save();
 
-		return redirect()->back();
+		return redirect('/login');
 	}
 
 }

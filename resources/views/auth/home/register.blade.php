@@ -1,8 +1,7 @@
 @extends('app')
 
 @section('title')
-
-Register | Repair-Inc
+Register | Repair.Inc
 @endsection
 
 @section('content')
@@ -22,22 +21,21 @@ Register | Repair-Inc
 						@csrf
 						<div class="row">
 							<div class="col-12 mb-30">
-								<input type="text" placeholder="Username" name="username">
+								<input type="text" placeholder="Username" name="username" required>
 							</div>
 							<div class="col-12 mb-30">
-								<input type="email" placeholder="Email" name="email">
+								<input type="email" placeholder="Email" name="email" required>
 							</div>
 							<div class="col-12 mb-30">
-								<input type="text" placeholder="Nomor Telepon" name="notelp">
+								<input type="text" placeholder="Nomor Telepon" name="notelp" required>
 							</div>
 							<div class="col-12 mb-20">
-								<input type="password" placeholder="Password" name="password">
+								<input type="password" placeholder="Password" name="password" required>
 							</div>
-
 							<div class="col-12 mb-20">
-								<input type="text" placeholder="Alamat" name="alamat">
+								<textarea name="alamat" placeholder="Alamat" required></textarea>
 							</div>
-							<div class="col-12 text-right">
+							<div class="col-12 text-center">
 								<input type="submit" value="Register"></input>
 							</div>
 						</div>

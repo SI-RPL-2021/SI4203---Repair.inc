@@ -1,3 +1,4 @@
+
 @if(request()->is('admin','admin/*'))
 <div id="sidebar" class='active'>
 	<div class="sidebar-wrapper active">
@@ -15,7 +16,7 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('admin.dashboard') }}" class='sidebar-link'>
-						<i data-feather="home" width="20"></i>
+						<i data-feather="pie-chart" width="20"></i> 
 						<span>Dashboard</span>
 					</a>
 				</li>
@@ -27,7 +28,7 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('admin.customer') }}" class='sidebar-link'>
-						<i data-feather="user" width="20"></i>
+						<i data-feather="users" width="20"></i> 
 						<span>Customer</span>
 					</a>
 				</li>
@@ -39,7 +40,7 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('admin.mitra') }}" class='sidebar-link'>
-						<i data-feather="briefcase" width="20"></i>
+						<i data-feather="users" width="20"></i> 
 						<span>Mitra</span>
 					</a>
 				</li>
@@ -51,20 +52,8 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('admin.jasa.kategori') }}" class='sidebar-link'>
-						<i data-feather="list" width="20"></i>
+						<i data-feather="list" width="20"></i> 
 						<span>Kategori Jasa</span>
-					</a>
-				</li>
-				<li class="sidebar-item 
-				{{ (request()->routeIs(
-
-					'admin.faq'
-
-					)) ? 'active' : '' }}
-					">
-					<a href="{{ route('admin.faq') }}" class='sidebar-link'>
-						<i data-feather="trello" width="20"></i>
-						<span>FAQ</span>
 					</a>
 				</li>
 				<li class="sidebar-item 
@@ -75,11 +64,12 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('admin.jasa') }}" class='sidebar-link'>
-						<i data-feather="truck" width="20"></i>
+						<i data-feather="briefcase" width="20"></i> 
 						<span>Jasa</span>
 					</a>
 				</li>
-				<li class="sidebar-item 
+				
+<li class="sidebar-item 
 				{{ (request()->routeIs(
 
 					'admin.artikel'
@@ -87,11 +77,22 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('admin.artikel') }}" class='sidebar-link'>
-						<i data-feather="archive" width="20"></i>
+						<i data-feather="layout" width="20"></i> 
 						<span>Artikel</span>
 					</a>
 				</li>
 
+<li class="sidebar-item 
+				{{ (request()->routeIs(
+					'admin.faq'
+					)) ? 'active' : '' }}
+					">
+					<a href="{{ route('admin.faq') }}" class='sidebar-link'>
+						<i data-feather="trello" width="20"></i> 
+						<span>FAQ</span>
+					</a>
+				</li>
+				
 			</ul>
 		</div>
 		<button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
@@ -115,7 +116,7 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('mitra.dashboard') }}" class='sidebar-link'>
-						<i data-feather="home" width="20"></i>
+						<i data-feather="pie-chart" width="20"></i> 
 						<span>Dashboard</span>
 					</a>
 				</li>
@@ -127,7 +128,7 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('mitra.jasa') }}" class='sidebar-link'>
-						<i data-feather="home" width="20"></i>
+						<i data-feather="briefcase" width="20"></i> 
 						<span>Jasa</span>
 					</a>
 				</li>
@@ -139,7 +140,7 @@
 					)) ? 'active' : '' }}
 					">
 					<a href="{{ route('mitra.pesanan') }}" class='sidebar-link'>
-						<i data-feather="home" width="20"></i>
+						<i data-feather="shopping-cart" width="20"></i> 
 						<span>Pesanan</span>
 					</a>
 				</li>

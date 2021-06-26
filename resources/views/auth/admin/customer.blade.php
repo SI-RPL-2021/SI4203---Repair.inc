@@ -1,7 +1,7 @@
 @extends('app-dashboard')
 
 @section('title')
-Customer | Repair-Inc
+Customer | Repair.Inc
 @endsection
 
 @section('content')
@@ -102,12 +102,12 @@ Customer | Repair-Inc
 
 					<div class="form-group">
 						<label for="notelp">No Telepon</label>
-						<input type="text" class="form-control" id="notelp" placeholder="No Telepon" name="notelp" value="{{ $cs->notelp }}">
+						<input type="number" class="form-control" id="notelp" placeholder="No Telepon" name="notelp" value="{{ $cs->notelp }}">
 					</div>
 
 					<div class="form-group">
 						<label for="password">Password</label>
-						<input type="password" class="form-control" id="password" placeholder="Password" name="password" value="">
+						<input type="password" class="form-control" id="password" placeholder="Password" name="password" value="" required>
 					</div>
 
 					<div class="form-group mb-3">

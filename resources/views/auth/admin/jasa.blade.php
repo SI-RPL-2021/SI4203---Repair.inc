@@ -1,9 +1,7 @@
 @extends('app-dashboard')
 
 @section('title')
-
-Jasa | Repair-Inc
-
+Jasa | Repair.Inc
 @endsection
 
 @section('content')
@@ -83,7 +81,7 @@ Jasa | Repair-Inc
 </div>
 
 <div class="modal fade" id="edit-{{ $cs->id }}" tabindex="-1" role="dialog">
-	<form action="{{ route('admin.jasa.edit', $cs->id) }}" method="POST">
+	<form action="{{ route('admin.jasa.edit', $cs->id) }}" method="POST" enctype="multipart/form-data">
 		@csrf
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -109,6 +107,13 @@ Jasa | Repair-Inc
 					<div class="form-group">
 						<label for="harga">Harga</label>
 						<input type="number" class="form-control" id="harga" placeholder="Harga" name="harga" value="{{ $cs->harga }}">
+					</div>
+					<div class="form-file">
+						<input type="file" class="form-file-input" id="gambar" name="gambar" required>
+						<label class="form-file-label" for="gambar">
+							<span class="form-file-text">Pilih Gambar...</span>
+							<span class="form-file-button">Cari</span>
+						</label>
 					</div>
 					<div class="form-group mb-3">
 						<label for="deskripsi" class="form-label">Deskripsi</label>

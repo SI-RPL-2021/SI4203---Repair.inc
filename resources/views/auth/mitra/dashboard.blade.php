@@ -1,6 +1,8 @@
 @extends('app-dashboard')
 
-@section('title','Mitra | Repair-Inc')
+@section('title')
+Mitra | Repair.Inc
+@endsection
 
 @section('content')
 <div class="page-title mb2">
@@ -113,8 +115,7 @@
   </div>
 
   <div class="row mb-4">
-    <!-- <div class="col-md-7"> -->
-    <div class="card">
+        <div class="card">
       <div class="card-header">
         <h3 class='card-heading p-1 pl-3'>Pesanan Terbaru</h3>
       </div>

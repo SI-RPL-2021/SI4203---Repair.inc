@@ -1,7 +1,7 @@
 @extends('app-dashboard')
 
 @section('title')
-Mitra | Repair-Inc
+Mitra | Repair.Inc
 @endsection
 
 @section('content')
@@ -154,27 +154,27 @@ Mitra | Repair-Inc
 				<div class="modal-body">
 					<div class="form-group">
 						<label for="username">Username</label>
-						<input type="text" class="form-control" id="username" placeholder="Username" name="username">
+						<input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
 					</div>
 
 					<div class="form-group">
 						<label for="nama">Nama</label>
-						<input type="text" class="form-control" id="nama" placeholder="Nama" name="nama">
+						<input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" required>
 					</div>
 
 					<div class="form-group">
 						<label for="notelp">No Telepon</label>
-						<input type="text" class="form-control" id="notelp" placeholder="No Telepon" name="notelp">
+						<input type="number" class="form-control" id="notelp" placeholder="No Telepon" name="notelp" required>
 					</div>
 
 					<div class="form-group">
 						<label for="password">Password</label>
-						<input type="password" class="form-control" id="password" placeholder="Password" name="password" value="">
+						<input type="password" class="form-control" id="password" placeholder="Password" name="password" value="" required>
 					</div>
 
 					<div class="form-group mb-3">
 						<label for="descPerform" class="form-label">Deskripsi Performa</label>
-						<textarea class="form-control" id="descPerform" rows="3" name="descPerform"></textarea>
+						<textarea class="form-control" id="descPerform" rows="3" name="descPerform" required></textarea>
 					</div>
 
 				</div>

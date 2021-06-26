@@ -1,6 +1,8 @@
 @extends('app-dashboard')
 
-@section('title','faq | Repair-Inc')
+@section('title')
+FAQ | Repair.Inc
+@endsection
 
 @section('content')
 <div class="page-title mb2">
@@ -18,7 +20,7 @@
             <table class='table table-striped' id="table1">
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th>No.</th>
                         <th>Question</th>
                         <th>Answer</th>
                         <th>Action</th>
@@ -27,7 +29,7 @@
                 <tbody>
                     @foreach($faq as $js)
                     <tr>
-                        <td>{{ $js->id }}</td>
+                        <td>{{$loop->iteration}}</td>
                         <td>{{ $js->questions }}</td>
                         <td>{{ $js->answer }}</td>
                         <td class="text-right">
@@ -113,39 +115,39 @@
 @endforeach
 
 <div class="modal fade" id="add-new" tabindex="-1" role="dialog">
-	<form action="{{ route('admin.faq.store') }}" method="POST" enctype="multipart/form-data">
-		@csrf
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Add New Kategori</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<i data-feather="x"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="form-group">
-						<label for="nama">Question</label>
-						<input type="text" class="form-control" id="nama" placeholder="Nama" name="questions">
-					</div>
-					<div class="form-group">
-						<label for="nama">Answer</label>
-						<textarea type="text" class="form-control" id="nama" name="answer" placeholder="masukkan jawaban"></textarea>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-light-secondary" data-dismiss="modal">
-						<i class="bx bx-x d-block d-sm-none"></i>
-						<span class="d-none d-sm-block">Close</span>
-					</button>
+  <form action="{{ route('admin.faq.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Add New Kategori</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i data-feather="x"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="nama">Question</label>
+            <input type="text" class="form-control" id="nama" placeholder="Nama" name="questions">
+          </div>
+          <div class="form-group">
+            <label for="nama">Answer</label>
+            <textarea type="text" class="form-control" id="nama" name="answer" placeholder="masukkan jawaban"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
+            <i class="bx bx-x d-block d-sm-none"></i>
+            <span class="d-none d-sm-block">Close</span>
+          </button>
 
-					<button type="submit" class="btn btn-primary ml-1">
-						<i class="bx bx-check d-block d-sm-none"></i>
-						<span class="d-none d-sm-block">Simpan</span>
-					</button>
-				</div>
-			</div>
-		</div>
-	</form>
+          <button type="submit" class="btn btn-primary ml-1">
+            <i class="bx bx-check d-block d-sm-none"></i>
+            <span class="d-none d-sm-block">Simpan</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
 @endsection

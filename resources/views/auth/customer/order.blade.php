@@ -1,9 +1,7 @@
 @extends('app')
 
 @section('title')
-
-Order History | Repair-Inc
-
+Order History | Repair.Inc
 @endsection
 
 @section('content')

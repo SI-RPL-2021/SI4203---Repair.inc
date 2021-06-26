@@ -2,9 +2,7 @@
 
 @section('title')
 @foreach($kategori as $kt)
-
-{{ $kt->nama }} | Repair-Inc
-
+{{ $kt->nama }} | Repair.Inc
 @endforeach
 @endsection
 

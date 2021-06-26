@@ -1,7 +1,7 @@
 @extends('app-dashboard')
 
 @section('title')
-Kategori | Repair-Inc
+Kategori | Repair.Inc
 @endsection
 
 @section('content')
@@ -95,10 +95,10 @@ Kategori | Repair-Inc
 				<div class="modal-body">
 					<div class="form-group">
 						<label for="nama">Nama</label>
-						<input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" value="{{ $cs->nama }}">
+						<input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" value="{{ $cs->nama }}" required>
 					</div>
 					<div class="form-file">
-						<input type="file" class="form-file-input" id="gambar" name="gambar">
+						<input type="file" class="form-file-input" id="gambar" name="gambar" required>
 						<label class="form-file-label" for="gambar">
 							<span class="form-file-text">Pilih Gambar...</span>
 							<span class="form-file-button">Cari</span>
@@ -136,10 +136,10 @@ Kategori | Repair-Inc
 				<div class="modal-body">
 					<div class="form-group">
 						<label for="nama">Nama</label>
-						<input type="text" class="form-control" id="nama" placeholder="Nama" name="nama">
+						<input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" required>
 					</div>
 					<div class="form-file">
-						<input type="file" class="form-file-input" id="gambar" name="gambar">
+						<input type="file" class="form-file-input" id="gambar" name="gambar" required>
 						<label class="form-file-label" for="gambar">
 							<span class="form-file-text">Pilih Gambar...</span>
 							<span class="form-file-button">Cari</span>

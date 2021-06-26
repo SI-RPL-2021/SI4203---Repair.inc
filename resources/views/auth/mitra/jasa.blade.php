@@ -1,9 +1,7 @@
 @extends('app-dashboard')
 
 @section('title')
-
-Jasa | Repair-Inc
-
+Jasa | Repair.Inc
 @endsection
 
 @section('content')

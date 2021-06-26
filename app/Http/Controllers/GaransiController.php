@@ -13,7 +13,7 @@ class GaransiController extends Controller
 		$post->garansi = $request->garansi;
 		$post->save();
 
-		return redirect()->back();
+		return redirect('https://api.whatsapp.com/send?phone=+6282247100895&text=Halo admin, Saya mau mengajukan garansi');
 	}
 
 	public function edit(Request $request, $id){
@@ -22,7 +22,7 @@ class GaransiController extends Controller
 		$post->garansi = $request->garansi;
 		$post->save();
 
-		return redirect()->back();
+		return redirect('https://api.whatsapp.com/send?phone=+6282247100895&text=Halo admin, Saya mau mengajukan garansi');
 	}
 
 	public function delete($id){

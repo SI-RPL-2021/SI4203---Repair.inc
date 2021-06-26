@@ -2,7 +2,7 @@
 
 @section('title')
 @foreach($pesanan as $ps)
-{{ App\Kategori::where('id', App\Jasa::where('id', $ps->id_jasa)->value('id_kategori'))->value('nama') }}, {{ App\Jasa::where('id', $ps->id_jasa)->value('nama') }} | Repair-Inc
+{{ App\Kategori::where('id', App\Jasa::where('id', $ps->id_jasa)->value('id_kategori'))->value('nama') }}, {{ App\Jasa::where('id', $ps->id_jasa)->value('nama') }} | Repair-Inch
 @endforeach
 @endsection
 
@@ -110,11 +110,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <button 
-                        type="button" 
-                        class="btn btn-primary" 
-                        data-toggle="modal" 
-                        data-target="#modal-garansi">Klaim Garansi</button>
+                      
 
                         <button 
                         type="button" 
@@ -127,6 +123,12 @@
                         class="btn btn-primary" 
                         data-toggle="modal" 
                         data-target="#modal-ratting">Kirim Ratting</button>
+
+                        <button 
+                        type="button" 
+                        class="btn btn-primary" 
+                        data-toggle="modal" 
+                        data-target="#modal-garansi">Ajukan Garansi</button>
 
                     </div>
                 </div>
@@ -248,8 +250,10 @@
 
                 </div>
                 <div class="modal-footer">
+                    
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Kirim</button>
+                
                 </div>
             </div>
         </div>

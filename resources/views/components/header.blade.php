@@ -7,7 +7,7 @@
 					@auth('customer')
 					<div class="header-links">
 						<a href="{{ route('customer.order') }}">
-							<img src="{{asset('assets/images/icons/histo.png')}}" alt="Car Icon">
+							<img src="{{asset('assets/images/icons/histo.png')}}" alt="Car Icon"> 
 							<span>History Order</span>
 						</a>
 					</div>
@@ -25,7 +25,7 @@
 						@if (Auth::guard('customer'))
 						@auth('customer')
 						<a href="{{route('customer.profile', Auth::guard('customer')->user()->id)}}">
-							<i class="icofont icofont-user-alt-7"></i>
+							<i class="icofont icofont-user-alt-7"></i> 
 							<span>{{ Auth::guard('customer')->user()->username }}</span>
 						</a>
 						<a href="/logout">
@@ -51,7 +51,7 @@
 				<div class="col mt-15 mb-15">
 					<div class="header-logo">
 						<a href="/">
-							<img src="https://i.ibb.co/Yb4fYPc/Group-48.png" alt="no img" style="height: 40px;">
+							<img src="{{asset('assets/images/icons/repair.png')}}" alt="no img" style="height: 40px;">
 							<img class="theme-dark" src="{{asset('assets/images/logo-light.png')}}" alt="E&E - Electronics eCommerce Bootstrap4 HTML Template">
 						</a>
 					</div>
@@ -72,12 +72,6 @@
 								</li>
 								<li class="active"><a href="{{ route('artikel') }}">Artikel</a></li>
 								<li class="active"><a href="{{ route('faq') }}">FAQ</a></li>
-								@if (Auth::guard('customer'))
-								@auth('customer')
-								<li><a href="{{ route('customer.chat') }}">Customer Service</a></li>
-								@else
-								@endauth
-								@endif
 							</ul>
 						</nav>
 					</div>

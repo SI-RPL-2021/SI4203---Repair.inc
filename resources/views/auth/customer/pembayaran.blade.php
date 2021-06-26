@@ -1,9 +1,7 @@
 @extends('app')
 
 @section('title')
-
-Pembayaran | Repair-Inc
-
+Pembayaran | Repair.Inc
 @endsection
 
 @section('content')
