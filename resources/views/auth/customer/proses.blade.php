@@ -2,7 +2,7 @@
 
 @section('title')
 @foreach($pesanan as $ps)
-{{ App\Kategori::where('id', App\Jasa::where('id', $ps->id_jasa)->value('id_kategori'))->value('nama') }}, {{ App\Jasa::where('id', $ps->id_jasa)->value('nama') }} | Repair-Inch
+{{ App\Kategori::where('id', App\Jasa::where('id', $ps->id_jasa)->value('id_kategori'))->value('nama') }}, {{ App\Jasa::where('id', $ps->id_jasa)->value('nama') }} | Repair-Inc
 @endforeach
 @endsection
 
