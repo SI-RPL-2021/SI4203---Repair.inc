@@ -14,7 +14,8 @@
 						<p class="contact-info">
 							<span>Address</span>
 							You address will be here <br>
-						Lorem Ipsum text                        </p>
+							Lorem Ipsum text
+						</p>
 
 						<p class="contact-info">
 							<span>Phone</span>
@@ -92,9 +93,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-12">
-					<div class="footer-copyright"><p>&copy; Copyright, 2021 All Rights Reserved by <a href="/">Repair.inch</a></p></div>
+					<div class="footer-copyright">
+						<p>&copy; Copyright, 2021 All Rights Reserved by <a href="/">Repair.inc</a></p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div> 
+	</div>
 </div>

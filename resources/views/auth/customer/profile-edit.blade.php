@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'Edit Profile | Repair.Inch')
+@section('title', 'Edit Profile | Repair.Inc')
 
 @section('content')
 <div class="product-section section mb-60 mt-60">
