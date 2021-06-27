@@ -14,40 +14,13 @@ Repair.Inc
 						<div class="row align-items-center justify-content-between">
 							<div class="hero-content col">
 								<h2>Selamat Datang di</h2>
-								<h1><span>Repair.inc</span></h1>
-								<h1>IT’S <span class="big">29%</span> OFF</h1>
-								<a href="#">get it now</a>
+								<h1><span>Repair.Inc</span></h1>								
 							</div>
 
-							<div class="hero-image col"><img src="assets/images/hero/hero-1.png" alt="Hero Image"></div>
+							<div class="hero-image col"><img src="assets/images/repair.jpg" alt="Hero Image"></div>
 						</div>     
 					</div>
-
-					<div class="hero-item">
-						<div class="row align-items-center justify-content-between">
-							<div class="hero-content col">
-								<h2>Repair.inc</h2>
-								<h1><span>GL G6</span></h1>
-								<h1>IT’S <span class="big">35%</span> OFF</h1>
-								<a href="#">get it now</a>
-							</div>
-
-							<div class="hero-image col"><img src="assets/images/hero/hero-2.png" alt="Hero Image"></div>
-						</div>     
-					</div>
-
-					<div class="hero-item">
-						<div class="row align-items-center justify-content-between">
-							<div class="hero-content col">
-								<h2>HURRY UP!</h2>
-								<h1><span>MSVII Case</span></h1>
-								<h1>IT’S <span class="big">15%</span> OFF</h1>
-								<a href="#">get it now</a>
-							</div>
-
-							<div class="hero-image col"><img src="assets/images/hero/hero-3.png" alt="Hero Image"></div>
-						</div>     
-					</div>
+					
 				</div>
 
 			</div>
@@ -63,9 +36,9 @@ Repair.Inc
 				<!-- Feature Start -->
 				<div class="feature feature-shipping">
 					<div class="feature-wrap">
-						<div class="icon"><img src="assets/images/icons/feature-van.png" alt="Feature"></div>
-						<h4>FREE SHIPPING</h4>
-						<p>Start from $100</p>
+						<div class="icon"><img src="assets/images/icons/tool.png" alt="Feature"  width="25" height="25"></div>
+						<h4>FAST HANDLING</h4>
+						
 					</div>
 				</div><!-- Feature End -->
 			</div>
@@ -74,9 +47,9 @@ Repair.Inc
 				<!-- Feature Start -->
 				<div class="feature feature-guarantee">
 					<div class="feature-wrap">
-						<div class="icon"><img src="assets/images/icons/feature-walet.png" alt="Feature"></div>
+						<div class="icon"><img src="assets/images/icons/feature-walet-2.png" alt="Feature"></div>
 						<h4>MONEY BACK GUARANTEE</h4>
-						<p>Back within 15 days</p>
+						
 					</div>
 				</div><!-- Feature End -->
 			</div>
@@ -85,9 +58,9 @@ Repair.Inc
 				<!-- Feature Start -->
 				<div class="feature feature-security">
 					<div class="feature-wrap">
-						<div class="icon"><img src="assets/images/icons/feature-shield.png" alt="Feature"></div>
+						<div class="icon"><img src="assets/images/icons/feature-shield-2.png" alt="Feature"></div>
 						<h4>SECURE PAYMENTS</h4>
-						<p>Payment Security</p>
+						
 					</div>
 				</div><!-- Feature End -->
 			</div>
@@ -101,28 +74,22 @@ Repair.Inc
 
 		<!-- About Image -->
 		<div class="about-image col-lg-6 mb-50">
-			<img src="assets/images/about/about-1.png" alt="">
+			<img src="assets/images/about.png" alt="">
 		</div>
 
 		<!-- About Content -->
 		<div class="about-content col-lg-6">
 			<div class="row">
 				<div class="col-12 mb-50">
-					<h1>WELCOME TO <span>E&amp;E.</span></h1>
-					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
+					<h1>ABOUT<span> US </span></h1>
+					<p>Repair.Inc adalah sebuah platform website tempat mencari penyedia jasa reparasi profesional yang menyediakan layanan jasa rumah tangga seperti service kulkas, service AC, dan masih banyak jasa rumah tangga lainnya yang dapat anda temukan.</p>
 				</div>
 
 				<div class="col-12 mb-50">
-					<h4>WE START AT 2015</h4>
-					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
+					<p>Repair.Inc juga merekomendasikan penyedia jasa berdasarkan beberapa hal seperti lokasi mitra dengan pelanggan, garansi 30 hari setelah layanan jasa diberikan,  mengkonsiderasi penyedia jasa yang memiliki review yang baik dari pelanggan lain, dan yang pasti Repair.Inc akan mengutamakan kepuasan pelanggan untuk kenyamanan bersama.</p>
 				</div>
 
-				<div class="col-12 mb-50">
-					<h4>WIN BEST ONLINE SHOP AT 2017</h4>
-					<p>E&amp;E provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete account of the system, and expound the actual teachings of the eat explorer of the truth, the mer of human.</p>
 				</div>
-
-			</div>
 		</div>
 	</div>
 </div>
